@@ -1,0 +1,19 @@
+{
+  "policy": "route, don't rewrite: PASS->draft, FLAG|unresolved->best-single (3B)",
+  "escalated": 19,
+  "routedScore": {
+    "n": 119,
+    "mean": 8.823529411764707,
+    "sd": 1.730323075660008
+  },
+  "bestScore": {
+    "n": 118,
+    "mean": 8.805084745762711,
+    "sd": 1.7456097535131372
+  },
+  "draftScore": {
+    "n": 119,
+    "mean": 8.621848739495798,
+    "sd": 2.066650432662639
+  }
+}
