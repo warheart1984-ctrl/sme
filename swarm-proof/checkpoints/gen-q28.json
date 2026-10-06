@@ -1,0 +1,67 @@
+{
+  "qid": "q28",
+  "kind": "reading",
+  "prompt": "A shop recorded daily sales: Mon 12, Tue 9, Wed 15, Thu 9, Fri 20. Which day(s) had the lowest sales, and what number?",
+  "gold": "Tuesday and Thursday, 9 each.",
+  "chain": {
+    "draft": "req-1791284209153-2bbc7ca2-165",
+    "review": "req-1791284238781-85c036ae-166",
+    "free": "req-1791284243014-fa5e6c1e-167",
+    "fuse": "req-1791284261495-a9c70f7d-168"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To determine which days had the lowest sales, we need to look at the recorded sales numbers for each day. The lowest sales number is when the day's sales are 9. Therefore, the day with the lowest sales is Mon, when the sales were 12.",
+      "model": "qwen2.5:0.5b",
+      "ms": 1814
+    },
+    "best-single": {
+      "text": "The days with the lowest sales were Tue and Thu, with a sales number of 9.",
+      "model": "llama3.2:3b",
+      "ms": 1066
+    },
+    "draft-raw": {
+      "text": "To find the day(s) with the lowest sales, we need to calculate the total sales for each day.\n\nMon 12: 12\nTue 9: 9\nWed 15: 15\nThu 9: 9\nFri 20: 20\n\nThe lowest sales day is Tuesday with 9 units sold.",
+      "model": "llama3.2:1b",
+      "ms": 29622
+    },
+    "swarm-free": {
+      "text": "To find the day(s) with the lowest sales, we need to calculate the total sales for each day.\n\nMon: 12\nTue: 9\nWed: 15\nThu: 9\nFri: 20\n\nThe lowest sales day is Tuesday and Thursday, with 9 units sold.",
+      "model": "llama3.2:3b",
+      "ms": 18479
+    },
+    "swarm-fuse": {
+      "text": "To find the day(s) with the lowest sales, we need to calculate the total sales for each day.\n\nMon 12: 12\nTue 9: 9\nWed 15: 15\nThu 9: 9\nFri 20: 20\n\nThe lowest sales day is Tuesday with 9 units sold.",
+      "model": "llama3.2:3b",
+      "ms": 3253
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 29622
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4231,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18479
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3253
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 1814
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1066
+    }
+  }
+}

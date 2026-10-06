@@ -1,0 +1,7 @@
+{
+  "qid": "q30",
+  "verdict": "FLAG",
+  "confidence": 0.8,
+  "text": "FINAL VERDICT: FLAG\n\nCONFIDENCE: 0.80\n\nThe given draft answer contains the following errors:\n\n1. The expression inside the parentheses is evaluated as 4 + 2 = 6, not 4 + 2 = 6 ( incorrect operation )\n2. Multiplying 3 by the result 6 is correct, but the correct order of operations is applied, not 3 x 6 = 18 ( incorrect order of operations )\n3. The correct order of operations is applied, but 10 / 2 = 5 is correct, but the result 5 is subtracted from 18, not multiplied by 3, which is incorrect ( incorrect arithmetic )\n4. The correct order of operations is applied, but 3 x 6 = ",
+  "ms": 34140
+}

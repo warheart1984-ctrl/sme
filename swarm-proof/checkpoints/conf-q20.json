@@ -1,0 +1,7 @@
+{
+  "qid": "q20",
+  "verdict": null,
+  "confidence": 0.8,
+  "text": "After reviewing the draft answer, I found the following errors:\n\n* The phrase \"fewer\" should be \"fewer people\", as the subject is \"people\" rather than \"people at the park\".\n* The sentence should be \"There were fewer people at the park today\" rather than \"There were fewer people at the park today.\"\n* The word \"at\" is unnecessary in the sentence; it can be removed for clarity.\n\nCONFIDENCE: 0.80",
+  "ms": 20887
+}

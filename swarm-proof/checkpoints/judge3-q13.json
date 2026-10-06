@@ -1,0 +1,70 @@
+{
+  "qid": "q13",
+  "kind": "analogy",
+  "candidates": {
+    "swarm-free-3c": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 6,
+          "raw": "SCORE: 6",
+          "ms": 16092
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 4,
+          "raw": "SCORE: 4",
+          "ms": 203
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 6,
+          "raw": "SCORE: 6",
+          "ms": 203
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 0,
+          "raw": "SCORE: 0",
+          "ms": 18637
+        }
+      ]
+    },
+    "swarm-fuse-3c": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 2,
+          "raw": "SCORE: 2",
+          "ms": 14502
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 4,
+          "raw": "SCORE: 4",
+          "ms": 178
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 4,
+          "raw": "SCORE: 4",
+          "ms": 178
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 0,
+          "raw": "SCORE: 0",
+          "ms": 15461
+        }
+      ]
+    }
+  }
+}

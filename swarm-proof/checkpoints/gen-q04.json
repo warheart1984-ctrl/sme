@@ -1,0 +1,67 @@
+{
+  "qid": "q04",
+  "kind": "arithmetic",
+  "prompt": "A baker has 12 eggs. Each cake needs 3 eggs. How many cakes can she bake, and how many eggs are left over?",
+  "gold": "4 cakes, 0 eggs left over.",
+  "chain": {
+    "draft": "req-1791282819096-c052a4ce-21",
+    "review": "req-1791282846344-0914b8fb-22",
+    "free": "req-1791282850322-2fbf6771-23",
+    "fuse": "req-1791282869328-471c1334-24"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To determine how many cakes the baker can bake and how many eggs are left over, we can use the following calculation:\n\n1. First, calculate the total number of cakes she can bake: \\( \\text{total cakes} = \\frac{12 \\text{ eggs}}{3 \\text{ eggs per cake}} \\).\n2. Then, calculate the number of eggs left over after baking the maximum number of cakes: \\( \\text{leftover eggs} = 12 \\text{ eggs} - \\left(\\frac{12 \\text{ eggs}}{3 \\text{ eggs per cake}} \\times \\text{",
+      "model": "qwen2.5:0.5b",
+      "ms": 3361
+    },
+    "best-single": {
+      "text": "To find out how many cakes the baker can bake, divide the total number of eggs by the number of eggs needed per cake:\n\n12 eggs ÷ 3 eggs/cake = 4 cakes\n\nTo find out how many eggs are left over, multiply the number of cakes by the number of eggs needed per cake, then subtract that from the total number of eggs:\n\n4 cakes × 3 eggs/cake = 12 eggs\n12 eggs - 12 eggs = 0 eggs left over\n\nThe baker can bake 4 cakes and have 0 eggs left over.",
+      "model": "llama3.2:3b",
+      "ms": 4123
+    },
+    "draft-raw": {
+      "text": "To find out how many cakes the baker can bake and how many eggs are left over, we need to divide the total number of eggs by the number of eggs needed per cake.\n\n12 eggs / 3 eggs per cake = 4 cakes\n\nThe baker can bake 4 cakes, using 12 eggs. There are no eggs left over, as 12 eggs are exactly enough for 4 cakes.",
+      "model": "llama3.2:1b",
+      "ms": 27247
+    },
+    "swarm-free": {
+      "text": "To find out how many cakes the baker can bake and how many eggs are left over, we need to divide the total number of eggs by the number of eggs needed per cake.\n\n12 eggs ÷ 3 eggs per cake = 4 cakes\n\nThe baker can bake 4 cakes, using 12 eggs. There are no eggs left over, as 12 eggs are exactly enough for 4 cakes.",
+      "model": "llama3.2:3b",
+      "ms": 19004
+    },
+    "swarm-fuse": {
+      "text": "To find out how many cakes the baker can bake and how many eggs are left over, we need to divide the total number of eggs by the number of eggs needed per cake.\n\n12 eggs / 3 eggs per cake = 4 cakes\n\nThe baker can bake 4 cakes, using 12 eggs. There are no eggs left over, as 12 eggs are exactly enough for 4 cakes.",
+      "model": "llama3.2:3b",
+      "ms": 3650
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 27247
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3976,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 19004
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3650
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3361
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 4123
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "qid": "q23",
+  "verdict": "PASS",
+  "confidence": 0.8,
+  "text": "FINAL VERDICT: PASS\nCONFIDENCE: 0.80\n\n Errors:\n\n* The draft states that 1 liter is equal to 1000 milliliters, but it does not provide a conversion factor for milliliters to liters. This is a factual error.\n* The draft assumes that 2 liters = 2 x 1000, but this is an incorrect arithmetic operation. The correct operation would be 2 x 1000, which equals 2000, not 4000.\n* The draft states that to convert 2 liters to milliliters, we multiply 2 by 1000, but this is an incorrect assumption. The correct conversion factor is 1 liter = 1000 milliliters, and to convert 2 liters, we would",
+  "ms": 35171
+}

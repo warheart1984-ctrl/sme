@@ -1,0 +1,67 @@
+{
+  "qid": "q05",
+  "kind": "grammar",
+  "prompt": "Choose the correct word: 'The rain had a big ___ on the match.' (affect / effect)",
+  "gold": "effect.",
+  "chain": {
+    "draft": "req-1791282874968-7bda7025-27",
+    "review": "req-1791282897046-afbe5787-28",
+    "free": "req-1791282900975-8df27a25-29",
+    "fuse": "req-1791282919189-f969fa39-30"
+  },
+  "fuseKept": false,
+  "candidates": {
+    "weakest-single": {
+      "text": "The correct word is: affect",
+      "model": "qwen2.5:0.5b",
+      "ms": 498
+    },
+    "best-single": {
+      "text": "The correct word is: effect.\n\nExplanation: \"Effect\" refers to the result or outcome of something, in this case, the impact of the rain on the match.",
+      "model": "llama3.2:3b",
+      "ms": 1485
+    },
+    "draft-raw": {
+      "text": "The correct word is \"effect.\" \n\nThe sentence should read: \"The rain had an effect on the match.\" The word \"effect\" means a result or outcome.",
+      "model": "llama3.2:1b",
+      "ms": 22077
+    },
+    "swarm-free": {
+      "text": "The correct word is \"affect\". \n\nThe sentence should read: \"The rain had an effect on the match.\" The word \"affect\" is a verb that means to influence or have an impact on something, whereas \"effect\" is a noun that refers to a result or outcome.",
+      "model": "llama3.2:3b",
+      "ms": 18212
+    },
+    "swarm-fuse": {
+      "text": "The correct word is \"effect.\" \n\nThe rain had an effect on the match. The word \"effect\" means a result or outcome.",
+      "model": "llama3.2:3b",
+      "ms": 1737
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 22077
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3927,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18212
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1737
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 498
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1485
+    }
+  }
+}

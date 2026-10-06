@@ -1,0 +1,67 @@
+{
+  "qid": "q27",
+  "kind": "science",
+  "prompt": "What is the main function of red blood cells in the human body? Answer in one sentence.",
+  "gold": "They carry oxygen from the lungs to the body's tissues.",
+  "chain": {
+    "draft": "req-1791284157572-059ef36a-159",
+    "review": "req-1791284181974-f21e1e31-160",
+    "free": "req-1791284185941-4d04b243-161",
+    "fuse": "req-1791284203959-11d5e72a-162"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "The main function of red blood cells in the human body is to transport oxygen and carbon dioxide.",
+      "model": "qwen2.5:0.5b",
+      "ms": 1005
+    },
+    "best-single": {
+      "text": "The main function of red blood cells in the human body is to carry oxygen from the lungs to the body's tissues and carbon dioxide from the tissues back to the lungs.",
+      "model": "llama3.2:3b",
+      "ms": 1518
+    },
+    "draft-raw": {
+      "text": "The main function of red blood cells in the human body is to carry oxygen from the lungs to the body's tissues and carbon dioxide back to the lungs, a process essential for the delivery of oxygen and removal of waste products.",
+      "model": "llama3.2:1b",
+      "ms": 24400
+    },
+    "swarm-free": {
+      "text": "The main function of red blood cells in the human body is to carry oxygen from the lungs to the body's tissues and carbon dioxide back to the lungs, a process essential for the delivery of oxygen and removal of waste products.",
+      "model": "llama3.2:3b",
+      "ms": 18015
+    },
+    "swarm-fuse": {
+      "text": "The main function of red blood cells in the human body is to carry oxygen from the lungs to the body's tissues and carbon dioxide back to the lungs, a process essential for the delivery of oxygen and removal of waste products.",
+      "model": "llama3.2:3b",
+      "ms": 2298
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 24400
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3966,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18015
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2298
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 1005
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1518
+    }
+  }
+}

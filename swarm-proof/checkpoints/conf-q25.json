@@ -1,0 +1,7 @@
+{
+  "qid": "q25",
+  "verdict": "FLAG",
+  "confidence": 0,
+  "text": "FINAL VERDICT: FLAG\nCONFIDENCE: 0.00\n\nThere are several factual errors in the draft answer:\n\n* The unit of the total bill is pounds, not pounds, which is a unit of weight, not volume.\n* The correct division is 45 ÷ 3, not 45 pounds ÷ 3 friends.\n* The result of the division is 15 pounds, not pounds per friend.\n\nAdditionally, there are logical jumps in the reasoning:\n\n* The question asks how much each friend pays, but the answer is simply the total bill divided by the number of friends. There is no logical connection between the two.\n* There is also no consideration of the weight of the bill, which is why it's divided by 3 friends instead of the number of pounds",
+  "ms": 35217
+}

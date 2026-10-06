@@ -1,0 +1,67 @@
+{
+  "qid": "q02",
+  "kind": "logic",
+  "prompt": "All roses are flowers. Some flowers fade quickly. Does it follow that some roses fade quickly? Explain briefly.",
+  "gold": "No. The premise says some flowers fade quickly, but roses may be a subset of flowers that do not fade quickly. No valid conclusion.",
+  "chain": {
+    "draft": "req-1791282709067-34d34e61-9",
+    "review": "req-1791282732790-2bc064f9-10",
+    "free": "req-1791282736818-b6da8661-11",
+    "fuse": "req-1791282755680-07b50b4b-12"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "Yes, it follows that some roses fade quickly. Roses are a type of flower, and flowers are a type of plant. Since roses are a type of flower, and flowers are a type of plant, it logically follows that some roses are also plants and therefore, some roses must fade quickly.",
+      "model": "qwen2.5:0.5b",
+      "ms": 3252
+    },
+    "best-single": {
+      "text": "Yes, it does follow. If all roses are flowers, and some flowers fade quickly, then it's a subset of the roses that are also flowers, so some roses (the ones that are flowers) will also fade quickly.",
+      "model": "llama3.2:3b",
+      "ms": 3922
+    },
+    "draft-raw": {
+      "text": "No, it does not follow that some roses fade quickly. The statement \"All roses are flowers\" is a generalization, not a specific claim. It does not imply that every rose will fade quickly. There could be exceptions, such as hybrid teas or floribundas that are bred for their long-lasting blooms.",
+      "model": "llama3.2:1b",
+      "ms": 23722
+    },
+    "swarm-free": {
+      "text": "All roses are flowers. Some flowers fade quickly. It does not follow that some roses fade quickly. The generalization that all roses are flowers does not imply that every rose will fade quickly. There could be exceptions, such as hybrid teas or floribundas that are bred for their long-lasting blooms.",
+      "model": "llama3.2:3b",
+      "ms": 18861
+    },
+    "swarm-fuse": {
+      "text": "No, it does not follow that some roses fade quickly. The statement \"All roses are flowers\" is a generalization, not a specific claim. It does not imply that every rose will fade quickly. There could be exceptions, such as hybrid teas or floribundas that are bred for their long-lasting blooms.",
+      "model": "llama3.2:3b",
+      "ms": 3028
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 23722
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4025,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18861
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3028
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3252
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 3922
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "qid": "q17",
+  "verdict": null,
+  "confidence": null,
+  "text": "CONSIDERED DRAFT ANSWER:\n\n* Error 1: \"All tigers are mammals\" - should be \"All tigers are tigers\" (the species name).\n* Error 2: \"all cats are tigers\" - incorrect. All tigers are indeed cats, but all cats are not tigers (the species names).\n* Error 3: \"while all tigers are cats\" - incorrect. This is a tautology and does not provide any new information.\n* Error 4: \"not all cats are tigers\" - incorrect. This is a tautology and does not provide any new information.\n* Error 5: \"the difference in their species names (Felis for cats and Panthera for tigers) indicates that they are distinct",
+  "ms": 34836
+}

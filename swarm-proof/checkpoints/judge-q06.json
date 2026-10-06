@@ -1,0 +1,166 @@
+{
+  "qid": "q06",
+  "kind": "science",
+  "candidates": {
+    "weakest-single": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 4,
+          "raw": "SCORE: 4",
+          "ms": 13638
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 6,
+          "raw": "SCORE: 6",
+          "ms": 191
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 4,
+          "raw": "SCORE: 4",
+          "ms": 180
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 3,
+          "raw": "SCORE: 3",
+          "ms": 15061
+        }
+      ]
+    },
+    "best-single": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 4,
+          "raw": "SCORE: 4",
+          "ms": 13530
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 6,
+          "raw": "SCORE: 6",
+          "ms": 193
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 180
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 7,
+          "raw": "SCORE: 7",
+          "ms": 15001
+        }
+      ]
+    },
+    "draft-raw": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 7,
+          "raw": "SCORE: 7",
+          "ms": 13722
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 6,
+          "raw": "SCORE: 6",
+          "ms": 195
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 7,
+          "raw": "SCORE: 7",
+          "ms": 183
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 8,
+          "raw": "SCORE: 8",
+          "ms": 14218
+        }
+      ]
+    },
+    "swarm-free": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 15195
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 8,
+          "raw": "SCORE: 8",
+          "ms": 217
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 206
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 8,
+          "raw": "SCORE: 8",
+          "ms": 17108
+        }
+      ]
+    },
+    "swarm-fuse": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 16778
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 8,
+          "raw": "SCORE: 8",
+          "ms": 181
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 175
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 8,
+          "raw": "SCORE: 8",
+          "ms": 14829
+        }
+      ]
+    }
+  }
+}

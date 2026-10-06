@@ -1,0 +1,44 @@
+{
+  "qid": "q08",
+  "kind": "arithmetic",
+  "prompt": "Sara has $10. She buys 3 apples at $1.50 each and a juice for $2. How much money does she have left?",
+  "gold": "$3.50 (10 - 4.50 - 2 = 3.50).",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289540125-de385120-22",
+    "free": "req-1791289543009-3d52dd14-23",
+    "fuse": "req-1791289547485-65fbc814-24"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find out how much money Sara has left, we need to calculate the total amount she spent and subtract that from the initial amount of money she had.\n\nShe bought 3 apples at $1.50 each, so the total cost of the apples is 3 x $1.50 = $4.50.\n\nShe also bought a juice for $2 before buying the apples, so the total cost of these items is $4.50 + $2 = $6.50.\n\nSara had $10 initially, so she has $10 - $6.50 = $3.50 left.\n\nTherefore, Sara has $3.50.",
+      "model": "llama3.2:3b",
+      "ms": 4475
+    },
+    "swarm-fuse-3c": {
+      "text": "To find out how much money Sara has left, we need to calculate the total amount she spent and subtract that from the initial amount of money she had.\n\nShe bought 3 apples at $1.50 each, so the total cost of the apples is 3 x $1.50 = $4.50.\n\nIn addition to the apples, she also bought a juice for $2, which should be indicated as being bought before the apples.\n\nThe total amount she spent is $4.50 + $2 = $6.50.\n\nSara had $10 initially, so she has $10 - $6.50 = $3.50 left.\n\nTherefore, Sara has $3.",
+      "model": "llama3.2:3b",
+      "ms": 4798
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 2882,
+      "verdict": "PASS",
+      "verdictLenient": "PASS",
+      "text": "Here is the list of exact errors:\n\n* The juice is not mentioned to have been bought before the apples, so it's not clear if it's included in the total cost. \n\n* The final answer is $3.50, but the calculation is correct. \n\nFINAL VERDICT: PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 4475
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 4798
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

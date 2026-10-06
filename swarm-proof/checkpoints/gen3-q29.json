@@ -1,0 +1,44 @@
+{
+  "qid": "q29",
+  "kind": "general",
+  "prompt": "Who wrote the play 'Romeo and Juliet'?",
+  "gold": "William Shakespeare",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": true,
+  "chain": {
+    "review": "req-1791289712609-4a6e156a-85",
+    "free": "req-1791289713167-47b4cf60-86",
+    "fuse": "req-1791289714029-1342763d-87"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "William Shakespeare wrote the play 'Romeo and Juliet'.",
+      "model": "llama3.2:3b",
+      "ms": 861
+    },
+    "swarm-fuse-3c": {
+      "text": "William Shakespeare wrote the play 'Romeo and Juliet'.",
+      "model": "llama3.2:3b",
+      "ms": 888
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 555,
+      "verdict": "PASS",
+      "verdictLenient": "PASS",
+      "text": "FINAL VERDICT: PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 861
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 888
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

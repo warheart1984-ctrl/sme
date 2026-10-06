@@ -1,0 +1,7 @@
+{
+  "qid": "q10",
+  "verdict": "FLAG",
+  "confidence": 0.8,
+  "text": "FINAL VERDICT: FLAG\nCONFIDENCE: 0.80\n\nERRORS:\n\n1. The order of operations (PEMDAS) is not followed in the calculation:\n   - The correct order should be: 4 x 5 ( multiplication ), 3 squared ( exponentiation), and then addition and subtraction (PEMDAS).\n   - The correct calculation is: 4 x 5 = 20, 3 squared = 9, 6 + 20 = 26, 26 - 9 = 17\n\n2. The final answer 17 is missing:\n   - The correct final answer should be: 6 + 4 x 5 - 3 squared = 26\n\n3. The correct solution is not presented:\n\nFINAL VERDICT:",
+  "ms": 34829
+}

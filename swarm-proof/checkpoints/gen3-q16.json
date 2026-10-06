@@ -1,0 +1,44 @@
+{
+  "qid": "q16",
+  "kind": "science",
+  "prompt": "Why do ice cubes float in water? Explain in one or two sentences.",
+  "gold": "Ice is less dense than liquid water because water expands as it freezes, so the same mass takes up more volume.",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289607069-5a585d87-46",
+    "free": "req-1791289609574-e93f4561-47",
+    "fuse": "req-1791289611569-8d222040-48"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "Ice cubes float in water because the density of ice is less than that of water, causing the ice to experience an upward buoyant force that allows it to remain suspended in the liquid. This phenomenon is a result of the difference in density between the solid ice and the liquid water.",
+      "model": "llama3.2:3b",
+      "ms": 1993
+    },
+    "swarm-fuse-3c": {
+      "text": "Ice cubes float in water because the density of ice is less than that of water, causing the ice to experience an upward buoyant force that allows it to remain suspended in the liquid. This phenomenon is a result of the difference in density between the solid ice and the liquid water, which is typically around 1.00 for water.",
+      "model": "llama3.2:3b",
+      "ms": 3063
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 2504,
+      "verdict": "FLAG",
+      "verdictLenient": "FLAG",
+      "text": "Here are the errors found in the draft answer:\n\n* The density of water is actually around 1.00, not 0.92.\n* The correct statement should be that the ice cubes float because the density of ice is less than that of water.\n\nFINAL VERDICT: FLAG"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1993
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3063
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

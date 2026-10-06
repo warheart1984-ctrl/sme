@@ -1,0 +1,44 @@
+{
+  "qid": "q18",
+  "kind": "arithmetic",
+  "prompt": "You walk 3 km north, 4 km east, then 3 km south. How far are you from your starting point?",
+  "gold": "4 km (directly east of the start).",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289623036-781917b0-52",
+    "free": "req-1791289627113-a1210aa5-53",
+    "fuse": "req-1791289631336-3c794083-54"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find the distance from the starting point, we need to calculate the net displacement in the north-south direction and the east-west direction.\n\nNorth-south direction: 3 km north - 3 km south = 0 km\nEast-west direction: 4 km east + 3 km east = 7 km east\n\nUsing the Pythagorean theorem, we can calculate the distance from the starting point as follows:\n\n√(0² + 7²) = √(0 + 49) = √49 = 7 km\n\nTherefore, you are 7 km east of your starting point.",
+      "model": "llama3.2:3b",
+      "ms": 4221
+    },
+    "swarm-fuse-3c": {
+      "text": "To find the distance from the starting point, we need to calculate the net displacement in the north-south direction and the east-west direction.\n\nNorth-south direction: 3 km north - 3 km south = 0 km\nEast-west direction: 4 km east + 3 km east = 7 km east\n\nUsing the Pythagorean theorem, we can calculate the distance from the starting point as follows:\n\n√(0² + 7²) = √(0 + 49) = √49 = 7 km\n\nTherefore, you are 7 km from your starting point.",
+      "model": "llama3.2:3b",
+      "ms": 4195
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 4076,
+      "verdict": "FLAG",
+      "verdictLenient": "FLAG",
+      "text": "Here is the list of errors:\n\n- In the east-west direction, 3 km south is subtracted from 3 km north, not added. The correct calculation is 3 km north - 3 km south = 0 km.\n- In the east-west direction, 4 km east and 3 km east should be added, but the correct calculation is 4 km east + 3 km east = 7 km east, not 7 km.\n\nFINAL VERDICT: FLAG"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 4221
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 4195
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

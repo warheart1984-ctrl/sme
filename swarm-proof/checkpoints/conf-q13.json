@@ -1,0 +1,7 @@
+{
+  "qid": "q13",
+  "verdict": "FLAG",
+  "confidence": 0.8,
+  "text": "FINAL VERDICT: FLAG\nCONFIDENCE: 0.80\n\nErrors:\n\n* The analogy is incorrect. A carpenter is associated with wood, not carpentry (the process of creating objects with the help of tools).\n* The missing part is \"doctor\" in the analogy.\n* The incorrect association is \"woodshop\" with \"wood\" and \"doctor\" with \"stethoscope\".\n\nThe correct completion of the analogy should be:\n\nPhysician is to stethoscope as carpenter is to toolbox.\n\nCONFIDENCE: 0.80",
+  "ms": 24681
+}

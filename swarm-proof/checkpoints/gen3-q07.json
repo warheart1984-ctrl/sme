@@ -1,0 +1,44 @@
+{
+  "qid": "q07",
+  "kind": "summary",
+  "prompt": "Summarize in one or two sentences: A study found that adults who slept 6 hours or less each night had a 12% higher risk of early death than those who slept 7 to 8 hours. The link remained after adjusting for age, sex, and lifestyle factors, so the authors say sleep duration itself matters, not just health problems.",
+  "gold": "Sleeping 6 hours or less was linked to a 12% higher early-death risk than 7-8 hours, even after adjusting for lifestyle and health factors, so the authors conclude short sleep itself matters.",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289531172-75539664-19",
+    "free": "req-1791289535144-bca45360-20",
+    "fuse": "req-1791289537175-421036e7-21"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "A study found that adults who slept 6 hours or less per night had a 12% higher risk of early death, adjusted for age, sex, and lifestyle factors. This suggests that sleep duration itself is a critical factor, rather than just health problems, in determining mortality risk.",
+      "model": "llama3.2:3b",
+      "ms": 2029
+    },
+    "swarm-fuse-3c": {
+      "text": "A study found that adults who slept 6 hours or less per night had a 12% higher risk of early death, adjusted for age, sex, and lifestyle factors. This suggests that sleep duration itself is a critical factor, rather than just health problems, in determining mortality risk.",
+      "model": "llama3.2:3b",
+      "ms": 2942
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 3970,
+      "verdict": "PASS",
+      "verdictLenient": "PASS",
+      "text": "Here is the list of errors:\n\n* \"per night\" should be \"per night\" (no change needed)\n* \"regardless of age, sex, or lifestyle factors\" should be \"adjusted for age, sex, and lifestyle factors\" ( incorrect phraseology)\n* \"in determining mortality risk\" should be \"in determining mortality risk\" (no change needed)\n\nHowever, there are actually no arithmetic errors.\n\nThe final answer is:\nFINAL VERDICT: PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2029
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2942
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

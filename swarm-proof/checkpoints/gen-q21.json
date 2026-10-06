@@ -1,0 +1,67 @@
+{
+  "qid": "q21",
+  "kind": "arithmetic",
+  "prompt": "What is the next number in the series: 2, 6, 12, 20, 30, __?",
+  "gold": "42 (differences grow by 2 each step: +4, +6, +8, +10, +12).",
+  "chain": {
+    "draft": "req-1791283799648-f3a80769-123",
+    "review": "req-1791283841844-ea1a0d1d-124",
+    "free": "req-1791283846441-418f404c-125",
+    "fuse": "req-1791283863410-ae606e98-126"
+  },
+  "fuseKept": false,
+  "candidates": {
+    "weakest-single": {
+      "text": "The next number in the series is 42.",
+      "model": "qwen2.5:0.5b",
+      "ms": 480
+    },
+    "best-single": {
+      "text": "The next number in the series is 42.",
+      "model": "llama3.2:3b",
+      "ms": 724
+    },
+    "draft-raw": {
+      "text": "To find the next number in the series, let's examine the pattern of the numbers:\n\n- 2 + 4 = 6\n- 6 + 6 = 12\n- 12 + 8 = 20\n- 20 + 10 = 30\n\nThe pattern appears to be adding 2, then 2, then 2, then 2, then increasing the increment by 2, 4, 6, 8, ... (doubling the increment). \n\nIf we apply this pattern, the next increment should be 16 (doubling the increment from 10). \n\nTherefore, the",
+      "model": "llama3.2:1b",
+      "ms": 42195
+    },
+    "swarm-free": {
+      "text": "The next number in the series is 46.",
+      "model": "llama3.2:3b",
+      "ms": 16967
+    },
+    "swarm-fuse": {
+      "text": "To find the next number in the series, let's examine the pattern of the numbers:\n\n- 2 + 4 = 6\n- 6 + 6 = 12\n- 12 + 8 = 20\n- 20 + 10 = 30\n\nThe pattern appears to be adding 2, then 2, then 2, then 2, then increasing the increment by 2, 4, 6, 8, ... (doubling the increment). \n\nIf we apply this pattern, the next increment should be 16 (doubling the increment from 10). \n\nTherefore, the next number in the series is 46.",
+      "model": "llama3.2:3b",
+      "ms": 5725
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 42195
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4596,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 16967
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 5725
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 480
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 724
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "qid": "q11",
+  "kind": "probability",
+  "prompt": "A fair coin is flipped 3 times. What is the probability of getting heads all three times?",
+  "gold": "1/8 (0.125)",
+  "chain": {
+    "draft": "req-1791283243099-5d9c8356-63",
+    "review": "req-1791283287160-59bc21dc-64",
+    "free": "req-1791283292002-3e506451-65",
+    "fuse": "req-1791283312017-53b792ee-66"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "The probability of getting heads all three times when a fair coin is flipped 3 times is 1/8.",
+      "model": "qwen2.5:0.5b",
+      "ms": 876
+    },
+    "best-single": {
+      "text": "The probability of getting heads all three times is 1/8, or 12.5%.",
+      "model": "llama3.2:3b",
+      "ms": 1072
+    },
+    "draft-raw": {
+      "text": "To find the probability of getting heads all three times, we need to consider the total number of possible outcomes and the number of outcomes where heads appears three times.\n\nThere are 2^3 = 8 possible outcomes when a coin is flipped 3 times (HHH, HHT, HTH, THH, HTT, THT, TTH, TTT).\n\nOut of these 8 outcomes, only 1 outcome (HHH) results in getting heads all three times.\n\nSo, the probability of getting heads all three times is 1/8 or 0.125.",
+      "model": "llama3.2:1b",
+      "ms": 44060
+    },
+    "swarm-free": {
+      "text": "The probability of getting heads all three times when a fair coin is flipped 3 times is 1/8 or 0.125.",
+      "model": "llama3.2:3b",
+      "ms": 20014
+    },
+    "swarm-fuse": {
+      "text": "To find the probability of getting heads all three times, we need to consider the total number of possible outcomes and the number of outcomes where heads appears three times.\n\nThere are 2^3 = 8 possible outcomes when a coin is flipped 3 times (HHH, HHT, HTH, THH, HTT, THT, TTH, TTT).\n\nOut of these 8 outcomes, only 1 outcome (HHH) results in getting heads all three times.\n\nSo, the probability of getting heads all three times is 1/8 or 0.125.",
+      "model": "llama3.2:3b",
+      "ms": 5163
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 44060
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4841,
+      "verdict": null
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 20014
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 5163
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 876
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1072
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "qid": "q01",
+  "verdict": "FLAG",
+  "confidence": 0.8,
+  "text": "FINAL VERDICT: FLAG\nCONFIDENCE: 0.80\n\nErrors:\n\n* The departure time is not given, so we cannot calculate the arrival time accurately.\n* The addition of 3 hours and 45 minutes to the departure time is incorrect. We need to add 3 hours to the departure time, not 3 hours and 45 minutes.\n* The addition of 45 minutes is incorrect. We should add 0.75 hours (3 hours and 45 minutes) to the departure time, not 45 minutes.\n* The final time calculated is incorrect. We should add 0.75 hours to 5:15 pm, not 5:50 pm.\n\nA correct calculation would be:\n2:15 pm + 3 hours = 5:15 pm",
+  "ms": 44543
+}

@@ -1,0 +1,67 @@
+{
+  "qid": "q16",
+  "kind": "science",
+  "prompt": "Why do ice cubes float in water? Explain in one or two sentences.",
+  "gold": "Ice is less dense than liquid water because water expands as it freezes, so the same mass takes up more volume.",
+  "chain": {
+    "draft": "req-1791283514781-0d100ffc-93",
+    "review": "req-1791283544114-c6ccbbae-94",
+    "free": "req-1791283548837-c35451ba-95",
+    "fuse": "req-1791283567275-d14f9c0f-96"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "Ice cubes float in water because their density is lower than water, allowing them to sink to the bottom of the container.",
+      "model": "qwen2.5:0.5b",
+      "ms": 663
+    },
+    "best-single": {
+      "text": "Ice cubes float in water because ice is less dense than liquid water. This is due to the arrangement of water molecules in ice, which creates a crystalline structure that is less compact than the molecules in liquid water.",
+      "model": "llama3.2:3b",
+      "ms": 1760
+    },
+    "draft-raw": {
+      "text": "Ice cubes float in water because the density of ice is less than that of water, causing the ice to experience an upward buoyant force that allows it to remain suspended in the liquid. This phenomenon is a result of the difference in density between the solid ice and the liquid water, which is typically around 0.92 for water.",
+      "model": "llama3.2:1b",
+      "ms": 29332
+    },
+    "swarm-free": {
+      "text": "Ice cubes float in water because they are less dense than water, resulting in an upward buoyant force that suspends them in the liquid. The density of water is approximately 1, and ice has a density of around 0.92, making it the lighter substance that floats.",
+      "model": "llama3.2:3b",
+      "ms": 18437
+    },
+    "swarm-fuse": {
+      "text": "Ice cubes float in water because the density of ice is less than that of water, causing the ice to experience an upward buoyant force that allows it to remain suspended in the liquid. This phenomenon is a result of the difference in density between the solid ice and the liquid water, which is typically around 0.92 for water.",
+      "model": "llama3.2:3b",
+      "ms": 3155
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 29332
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4721,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18437
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3155
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 663
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1760
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "qid": "q20",
+  "kind": "grammar",
+  "prompt": "Fill in the blank with 'fewer' or 'less': 'There were ___ people at the park today.'",
+  "gold": "fewer (people is countable).",
+  "chain": {
+    "draft": "req-1791283760201-e09f4623-117",
+    "review": "req-1791283777135-4bfd5318-118",
+    "free": "req-1791283781182-5aad573d-119",
+    "fuse": "req-1791283797324-a34c97f5-120"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "There were fewer people at the park today.",
+      "model": "qwen2.5:0.5b",
+      "ms": 392
+    },
+    "best-single": {
+      "text": "There were fewer people at the park today.",
+      "model": "llama3.2:3b",
+      "ms": 704
+    },
+    "draft-raw": {
+      "text": "There were fewer people at the park today.",
+      "model": "llama3.2:1b",
+      "ms": 16932
+    },
+    "swarm-free": {
+      "text": "There were fewer people at the park today.",
+      "model": "llama3.2:3b",
+      "ms": 16140
+    },
+    "swarm-fuse": {
+      "text": "There were fewer people at the park today.",
+      "model": "llama3.2:3b",
+      "ms": 1107
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 16932
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4045,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 16140
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1107
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 392
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 704
+    }
+  }
+}

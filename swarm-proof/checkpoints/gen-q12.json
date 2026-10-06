@@ -1,0 +1,67 @@
+{
+  "qid": "q12",
+  "kind": "arithmetic",
+  "prompt": "What is two-thirds of 48?",
+  "gold": "32",
+  "chain": {
+    "draft": "req-1791283320944-d48da98c-69",
+    "review": "req-1791283352222-f6a9656a-70",
+    "free": "req-1791283357108-871087d4-71",
+    "fuse": "req-1791283377785-9b175a61-72"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To calculate two-thirds of 48, you can use the following formula:\n\n\\[ \\text{two-thirds of } 48 = \\frac{2}{3} \\times 48 \\]\n\n\\[ = 8 \\times 48 \\]\n\n\\[ = 384 \\]\n\nSo, two-thirds of 48 is 384.",
+      "model": "qwen2.5:0.5b",
+      "ms": 3050
+    },
+    "best-single": {
+      "text": "Two-thirds of 48 is 32.",
+      "model": "llama3.2:3b",
+      "ms": 608
+    },
+    "draft-raw": {
+      "text": "To find two-thirds of 48, you multiply 48 by 2/3.\n\n48 × 2/3 = 48 × 2 ÷ 3 = 96/3 = 32\n\nSo, two-thirds of 48 is 32.",
+      "model": "llama3.2:1b",
+      "ms": 31277
+    },
+    "swarm-free": {
+      "text": "To find two-thirds of 48, you multiply 48 by 2/3.\n\n48 × 2/3 = 96/3 = 32\n\nSo, two-thirds of 48 is 32.",
+      "model": "llama3.2:3b",
+      "ms": 20675
+    },
+    "swarm-fuse": {
+      "text": "To find two-thirds of 48, you multiply 48 by 2/3.\n\n48 × 2/3 = 48 × 2 ÷ 3 = 96/3 = 32\n\nSo, two-thirds of 48 is 32.",
+      "model": "llama3.2:3b",
+      "ms": 2570
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 31277
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4885,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 20675
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2570
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3050
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 608
+    }
+  }
+}

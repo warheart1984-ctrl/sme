@@ -1,0 +1,67 @@
+{
+  "qid": "q24",
+  "kind": "science",
+  "prompt": "Which of these is a renewable energy source: coal, natural gas, solar, or uranium?",
+  "gold": "solar",
+  "chain": {
+    "draft": "req-1791283995632-0489fa88-141",
+    "review": "req-1791284027403-182b3b07-142",
+    "free": "req-1791284031382-5084c7a8-143",
+    "fuse": "req-1791284051472-2b883a1d-144"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "Coal, natural gas, and uranium are all examples of non-renewable energy sources. Solar energy, on the other hand, is a renewable energy source.",
+      "model": "qwen2.5:0.5b",
+      "ms": 2099
+    },
+    "best-single": {
+      "text": "The correct answer is: solar.\n\nCoal, natural gas, and uranium are non-renewable energy sources. Solar energy is a renewable energy source because it is replenished naturally and can be replenished over time.",
+      "model": "llama3.2:3b",
+      "ms": 1775
+    },
+    "draft-raw": {
+      "text": "The correct answer is: solar and natural gas.\n\nRenewable energy sources are those that can be replenished naturally over time, such as sunlight and wind. Solar energy is generated from sunlight, while natural gas is a fossil fuel that is formed from the remains of plants and animals that have been buried for millions of years. Uranium is a radioactive, non-renewable energy source.",
+      "model": "llama3.2:1b",
+      "ms": 31769
+    },
+    "swarm-free": {
+      "text": "The correct answer is: solar.\n\nRenewable energy sources are those that can be replenished naturally over time, such as sunlight and wind. Solar energy is generated from sunlight, while natural gas is a fossil fuel formed from the remains of plants and animals buried for millions of years. Uranium is a radioactive, non-renewable energy source. Coal is also a non-renewable energy source, formed from the remains of ancient plants and animals.",
+      "model": "llama3.2:3b",
+      "ms": 20087
+    },
+    "swarm-fuse": {
+      "text": "The correct answer is: solar and natural gas.\n\nRenewable energy sources are those that can be replenished naturally over time, such as sunlight and wind. Solar energy is generated from sunlight, while natural gas is a fossil fuel that is formed from the remains of plants and animals that have been buried for millions of years. Uranium is a radioactive, non-renewable energy source.",
+      "model": "llama3.2:3b",
+      "ms": 3582
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 31769
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3977,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 20087
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3582
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 2099
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1775
+    }
+  }
+}

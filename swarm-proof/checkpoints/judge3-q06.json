@@ -1,0 +1,70 @@
+{
+  "qid": "q06",
+  "kind": "science",
+  "candidates": {
+    "swarm-free-3c": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 4,
+          "raw": "SCORE: 4",
+          "ms": 13292
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 6,
+          "raw": "SCORE: 6",
+          "ms": 176
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 2,
+          "raw": "SCORE: 2",
+          "ms": 176
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 8,
+          "raw": "SCORE: 8",
+          "ms": 15351
+        }
+      ]
+    },
+    "swarm-fuse-3c": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 4,
+          "raw": "SCORE: 4",
+          "ms": 13623
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 6,
+          "raw": "SCORE: 6",
+          "ms": 196
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 175
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 5,
+          "raw": "SCORE: 5",
+          "ms": 15638
+        }
+      ]
+    }
+  }
+}

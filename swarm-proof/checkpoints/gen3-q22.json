@@ -1,0 +1,44 @@
+{
+  "qid": "q22",
+  "kind": "logic",
+  "prompt": "If it is raining, then the ground is wet. The ground is wet. Does it follow that it is raining? Explain briefly.",
+  "gold": "No. This is the valid-in-reverse error (affirming the consequent); a wet lawn or hose could also cause it.",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": true,
+  "chain": {
+    "review": "req-1791289659202-74351aa2-64",
+    "free": "req-1791289661727-eb8e63bc-65",
+    "fuse": "req-1791289664330-930f408d-66"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "If it is raining, then the ground is wet. The ground is wet. Does it follow that it is raining?\n\nNo, it does not follow that it is raining. The statement \"the ground is wet\" is a necessary but not sufficient condition for \"it is raining.\" Wetness can occur due to other factors, such as melting snow or irrigation, without rain.",
+      "model": "llama3.2:3b",
+      "ms": 2601
+    },
+    "swarm-fuse-3c": {
+      "text": "No, it does not follow that it is raining. The statement \"the ground is wet\" is a necessary but not sufficient condition for \"it is raining.\" Wetness can occur due to other factors, such as melting snow or irrigation, without rain.",
+      "model": "llama3.2:3b",
+      "ms": 2562
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 2524,
+      "verdict": "PASS",
+      "verdictLenient": "PASS",
+      "text": "Here is the review:\n\n* There are no obvious factual errors in the draft answer.\n* The arithmetic is correct.\n* There are no illogical jumps in the reasoning.\n* The draft answer provides a clear explanation of the distinction between necessary and sufficient conditions.\n\nFINAL VERDICT: PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2601
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2562
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

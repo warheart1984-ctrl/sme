@@ -1,0 +1,7 @@
+{
+  "qid": "q04",
+  "verdict": null,
+  "confidence": 0.8,
+  "text": "CONFIDENCE: 0.80\n\nThe draft answer contains the following errors:\n\n* The equation 12 eggs / 3 eggs per cake = 4 cakes is correct, but the conclusion that there are no eggs left over is incorrect.\n* The calculation 12 eggs / 3 eggs per cake = 4 cakes is correct, but the conclusion that 12 eggs are exactly enough for 4 cakes is also incorrect.\n* The conclusion that there are no eggs left over is incorrect, as 12 eggs are enough for 4 cakes, and there will be some eggs left over.\n\nThe missing part of the question is the number of cakes the baker can actually bake, which is 4 cakes, and the number of eggs used, which is 12 eggs.",
+  "ms": 33858
+}

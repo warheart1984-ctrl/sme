@@ -1,0 +1,67 @@
+{
+  "qid": "q08",
+  "kind": "arithmetic",
+  "prompt": "Sara has $10. She buys 3 apples at $1.50 each and a juice for $2. How much money does she have left?",
+  "gold": "$3.50 (10 - 4.50 - 2 = 3.50).",
+  "chain": {
+    "draft": "req-1791283033099-ae4b1c3d-45",
+    "review": "req-1791283075560-571e07f3-46",
+    "free": "req-1791283079651-18d3d210-47",
+    "fuse": "req-1791283100589-125c41b1-48"
+  },
+  "fuseKept": false,
+  "candidates": {
+    "weakest-single": {
+      "text": "To determine how much money Sara has left after her purchases, we need to calculate her total expenditure and subtract it from her initial amount of $10.\n\n1. Calculate the cost of the apples:\n   \\[\n   \\text{Cost of apples} = 3 \\times 1.50 = 4.50\n   \\]\n   So, the apples cost her $4.50.\n\n2. Add the cost of the apples and the cost of the juice:\n   \\[\n   \\text{Total cost} = 4.50 + 2 = 6.50\n   \\]\n   So",
+      "model": "qwen2.5:0.5b",
+      "ms": 3978
+    },
+    "best-single": {
+      "text": "To find out how much money Sara has left, we need to calculate the total amount she spent and subtract it from her initial $10.\n\n3 apples at $1.50 each: 3 x $1.50 = $4.50\nAdding the $2 juice: $4.50 + $2 = $6.50\n\nSubtracting the total spent from her initial $10:\n$10 - $6.50 = $3.50\n\nSara has $3.50 left.",
+      "model": "llama3.2:3b",
+      "ms": 3767
+    },
+    "draft-raw": {
+      "text": "To find out how much money Sara has left, we need to calculate the total amount she spent and subtract that from the initial amount of money she had.\n\nShe bought 3 apples at $1.50 each, so the total cost of the apples is 3 x $1.50 = $4.50.\n\nIn addition to the apples, she also bought a juice for $2.\n\nThe total amount she spent is $4.50 + $2 = $6.50.\n\nSara had $10 initially, so she has $10 - $6.50 = $3.50 left.\n\nTherefore, Sara has $3.50",
+      "model": "llama3.2:1b",
+      "ms": 42458
+    },
+    "swarm-free": {
+      "text": "To find out how much money Sara has left, we need to calculate the total amount she spent and subtract that from the initial amount of money she had.\n\nShe bought 3 apples at $1.50 each, so the total cost of the apples is 3 x $1.50 = $4.50.\n\nIn addition to the apples, she also bought a juice for $2.\n\nThe total amount she spent is $4.50 + $2 = $6.50.\n\nSara had $10 initially, so she has $10 - $6.50 = $3.50 left.\n\nTherefore, Sara has $3.50.",
+      "model": "llama3.2:3b",
+      "ms": 20937
+    },
+    "swarm-fuse": {
+      "text": "To find out how much money Sara has left, we need to calculate the total amount she spent and subtract that from the initial amount of money she had.\n\nShe bought 3 apples at $1.50 each, so the total cost of the apples is 3 x $1.50 = $4.50.\n\nIn addition to the apples, she also bought a juice for $2.\n\nThe total amount she spent is $4.50 + $2 = $6.50.\n\nSara had $10 initially, so she has $10 - $6.50 = $3.50 left.\n\nTherefore, Sara has $3.50.",
+      "model": "llama3.2:3b",
+      "ms": 5431
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 42458
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4091,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 20937
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 5431
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3978
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 3767
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "qid": "q20",
+  "kind": "grammar",
+  "prompt": "Fill in the blank with 'fewer' or 'less': 'There were ___ people at the park today.'",
+  "gold": "fewer (people is countable).",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": true,
+  "chain": {
+    "review": "req-1791289646154-4703e31d-58",
+    "free": "req-1791289646793-1937f62a-59",
+    "fuse": "req-1791289647529-bef8fafc-60"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "There were fewer people at the park today.",
+      "model": "llama3.2:3b",
+      "ms": 735
+    },
+    "swarm-fuse-3c": {
+      "text": "There were fewer people at the park today.",
+      "model": "llama3.2:3b",
+      "ms": 742
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 638,
+      "verdict": "PASS",
+      "verdictLenient": "PASS",
+      "text": "FINAL VERDICT: PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 735
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 742
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}
