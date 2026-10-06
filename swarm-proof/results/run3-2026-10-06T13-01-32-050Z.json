@@ -1,0 +1,8 @@
+{
+  "critic3": "llama3.2:3b",
+  "critic0": "qwen2.5:0.5b",
+  "notes": {
+    "judgeA": "llama3.2:3b",
+    "judgeB": "qwen2.5:3b"
+  }
+}

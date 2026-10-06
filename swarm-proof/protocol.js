@@ -61,18 +61,55 @@ function adjudicatorPrompt(question, draft, critique) {
   );
 }
 
-function singlePrompt(question) {
+function reviewPrompt(question, draft) {
   return (
-    `${rolePrefix(ROLES.SINGLE)} ` +
+    `${rolePrefix(ROLES.CRITIC)} ` +
+    'You are a strict reviewer. Check the draft answer for factual errors, wrong arithmetic, ' +
+    'illogical jumps, and missing parts. If you find any concrete error or gap, write a short ' +
+    'list of the exact errors, then end with:\n' +
+    'FINAL VERDICT: FLAG\n' +
+    'If the draft is correct, write only:\n' +
+    'FINAL VERDICT: PASS\n\n' +
+    `Question: ${question}\n\nDraft answer: ${draft}`
+  );
+}
+
+function adjudicatorFusePrompt(question, draft, critique) {
+  return (
+    `${rolePrefix(ROLES.ADJUDICATOR)} ` +
+    'You are the final adjudicator in KEEP-OR-FIX mode. Rule:\n' +
+    "- If the reviewer verdict is PASS (or no concrete error was listed), output the draft VERBATIM with zero changes. " +
+    "You may not rephrase, expand, or 'improve' a passed draft.\n" +
+    '- If the reviewer verdict is FLAG, apply ONLY the exact minimal corrections the reviewer listed. ' +
+    'Do not restructure, not rewrite the whole answer, not add extra explanation.\n' +
+    'Output only the final answer text.\n\n' +
+    `Question: ${question}\n\nDraft: ${draft}\n\nReviewer critique: ${critique}`
+  );
+}
+
+function parseReviewVerdict(text) {
+  const match = String(text).match(/FINAL VERDICT:\s*(PASS|FLAG)/i);
+  return match ? match[1].toUpperCase() : null;
+}
+
+function singlePrompt(question, model = null) {
+  return (
+    `${rolePrefix(ROLES.SINGLE)}${model ? modelTag(model) : ''}\n\n` +
     `Answer the question directly and concisely. Be accurate.\n\nQuestion: ${question}`
   );
 }
 
 function withModelTag(prompt, model) {
-  if (prompt.indexOf(MODEL_TOKEN) === 0) return prompt;
-  const end = prompt.indexOf('>>', MODEL_TOKEN.length);
-  if (end < 0) return `${MODEL_TOKEN}${model}>>\n\n${prompt}`;
-  return prompt.slice(end + 2);
+  const parsed = parseRole(prompt);
+  if (parsed.role) {
+    return `${ROLE_TOKEN}${parsed.role}>>${modelTag(model)}\n\n${parsed.rest}`;
+  }
+  const tagged = parseModelTag(prompt);
+  return tagged.model ? tagged.rest : `${ROLE_TOKEN}${ROLES.SINGLE}>>${modelTag(model)}\n\n${prompt}`;
+}
+
+function modelTag(model) {
+  return `${MODEL_TOKEN}${model}>>`;
 }
 
 function parseModelTag(rest) {
@@ -103,6 +140,7 @@ const MODELS = {
   weak: 'qwen2.5:0.5b',
   mid: 'llama3.2:1b',
   best: 'llama3.2:3b',
+  judgeB: 'qwen2.5:3b',
 };
 
 module.exports = {
@@ -111,10 +149,14 @@ module.exports = {
   rolePrefix,
   parseRole,
   withModelTag,
+  modelTag,
   parseModelTag,
   draftPrompt,
   criticPrompt,
   adjudicatorPrompt,
+  reviewPrompt,
+  adjudicatorFusePrompt,
+  parseReviewVerdict,
   singlePrompt,
   judgePrompt,
   parseScore,
