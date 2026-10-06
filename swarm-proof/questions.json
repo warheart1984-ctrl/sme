@@ -1,0 +1,55 @@
+{
+  "fixedBeforeRuns": true,
+  "writtenAt": "2026-10-06",
+  "purpose": "Swarm proof candidate set — frozen BEFORE any model run. Blind-judge scoring per question against gold/rubric. Judge sees only {prompt, gold, candidate}; never a config label.",
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "A train leaves at 2:15 pm and arrives 3 hours and 45 minutes later. What time does it arrive? Show the arithmetic.",
+      "gold": "6:00 pm (14:15 + 3:45 = 18:00).",
+      "rubric": "Correct arrival time (6:00 pm), minimal correct arithmetic shown."
+    },
+    {
+      "id": "q2",
+      "prompt": "All roses are flowers. Some flowers fade quickly. Does it follow that some roses fade quickly? Explain why or why not.",
+      "gold": "No. The premises do not say flowers that fade quickly include any roses; 'some flowers' may be entirely non-roses.",
+      "rubric": "Correctly rejects the invalid conclusion, explains the distribution gap."
+    },
+    {
+      "id": "q3",
+      "prompt": "What is the capital of Iceland, and roughly what is its population? Give one sentence of context.",
+      "gold": "Reykjavik; roughly 375k people in the country, about 140k in the city region.",
+      "rubric": "Correct capital and population within reasonable range."
+    },
+    {
+      "id": "q4",
+      "prompt": "A baker has 12 eggs. Each cake needs 3 eggs. How many full cakes can she bake, and how many eggs remain? Show the division.",
+      "gold": "4 cakes, 0 eggs remain (12 / 3 = 4).",
+      "rubric": "Correct quotient and remainder."
+    },
+    {
+      "id": "q5",
+      "prompt": "Choose the correct word: 'The rain had a big ___ on the match.' Is it 'affect' or 'effect'? Explain briefly why.",
+      "gold": "effect (noun). 'Affect' is the verb; here we need a noun object.",
+      "rubric": "Picks 'effect', correct part-of-speech reason."
+    },
+    {
+      "id": "q6",
+      "prompt": "A glass of water is left in a freezer overnight. What happened to it, and why? What state change occurred?",
+      "gold": "It froze: water → ice, liquid → solid, exothermic phase change at 0 C.",
+      "rubric": "Identifies freezing/solidification and names the phase change correctly."
+    },
+    {
+      "id": "q7",
+      "prompt": "Summarize in one or two sentences: A study found that students who consistently sleep eight or more hours per night score significantly higher on memory-recall tests than students who sleep less, regardless of total study time.",
+      "gold": "Sleeping 8+ hours nightly correlates with significantly better memory recall than short sleep, independent of study hours.",
+      "rubric": "Captures: 8+ hours, memory benefit, independent of study time. No invented causation."
+    },
+    {
+      "id": "q8",
+      "prompt": "Sara has $10. She buys 3 apples at $1.50 each and a bag of chips at $2.00. How much money does she have left? Show the work.",
+      "gold": "$3.50 (3 x 1.50 = 4.50; 4.50 + 2.00 = 6.50; 10 - 6.50 = 3.50).",
+      "rubric": "Correct final amount with coherent arithmetic."
+    }
+  ]
+}
