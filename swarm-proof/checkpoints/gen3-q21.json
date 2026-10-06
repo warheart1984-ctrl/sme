@@ -1,0 +1,44 @@
+{
+  "qid": "q21",
+  "kind": "arithmetic",
+  "prompt": "What is the next number in the series: 2, 6, 12, 20, 30, __?",
+  "gold": "42 (differences grow by 2 each step: +4, +6, +8, +10, +12).",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289648280-b6c895ff-61",
+    "free": "req-1791289652922-f2a344ce-62",
+    "fuse": "req-1791289657665-2924f010-63"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "The next number in the series is 46. The pattern appears to be obtained by adding consecutive even numbers: 4, 6, 8, 10, ... . The correct pattern is doubling the increment, starting from 4. Therefore, the next increment should be 10 x 2 = 20, which is incorrect, as it would result in a jump of 50, and instead, the correct increment should be 10 x 2 = 20 was incorrect, the correct increment is 10 x 2 = 20 was incorrect and the correct increment is 10 x 2 = 20 was incorrect, the correct increment is 4 * 2 = ",
+      "model": "llama3.2:3b",
+      "ms": 4743
+    },
+    "swarm-fuse-3c": {
+      "text": "30 + 16 = 46",
+      "model": "llama3.2:3b",
+      "ms": 1529
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 4641,
+      "verdict": null,
+      "verdictLenient": null,
+      "text": "1. The pattern of increments is not consistent: the increments are 4, 6, 8, 10, ..., which is not a simple arithmetic progression, but rather a sequence of consecutive even numbers. The correct pattern should be doubling the increment, starting from 4.\n\n2. The final arithmetic step should be 30 + 16 = 46.\n\n3. The reasoning for selecting 16 as the next increment seems incomplete. The correct reason should be that the increments are doubling, and the last increment was 10, so the next increment should be 10 x 2 = 20, but this is not correct, as it would result in a jump of 50,"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 4743
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1529
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

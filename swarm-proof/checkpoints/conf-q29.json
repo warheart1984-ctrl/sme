@@ -1,0 +1,7 @@
+{
+  "qid": "q29",
+  "verdict": "FLAG",
+  "confidence": 0,
+  "text": "FINAL VERDICT: FLAG\nCONFIDENCE: 0.00\n\nErrors:\n\n1. The draft states that William Shakespeare wrote the play, but William Shakespeare passed away in 1616, more than 400 years before the play \"Romeo and Juliet\" was written.\n2. The draft does not provide any information about the author of the play, only the title.\n3. The draft includes a statement about the play's author, which it should not.",
+  "ms": 21122
+}

@@ -1,0 +1,67 @@
+{
+  "qid": "q09",
+  "kind": "arithmetic",
+  "prompt": "How many minutes are in 2.5 hours? Show the arithmetic.",
+  "gold": "150 minutes (2.5 x 60 = 150).",
+  "chain": {
+    "draft": "req-1791283109683-b46a8ab8-51",
+    "review": "req-1791283136813-e245157e-52",
+    "free": "req-1791283140770-fcbd6d79-53",
+    "fuse": "req-1791283159463-a350c97a-54"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To convert 2.5 hours into minutes, you can use the following arithmetic:\n\n1. Multiply the hours by 60 (since there are 60 minutes in an hour):\n   2.5 hours × 60 minutes/hour = 150 minutes\n\nTherefore, 2.5 hours is equal to 150 minutes.",
+      "model": "qwen2.5:0.5b",
+      "ms": 2068
+    },
+    "best-single": {
+      "text": "To find the number of minutes in 2.5 hours, multiply 2.5 by 60.\n\n2.5 hours x 60 minutes/hour = 150 minutes",
+      "model": "llama3.2:3b",
+      "ms": 1583
+    },
+    "draft-raw": {
+      "text": "To find the number of minutes in 2.5 hours, we need to convert hours to minutes. There are 60 minutes in an hour.\n\n2.5 hours * 60 minutes per hour = 150 minutes\n\nSo, there are 150 minutes in 2.5 hours.",
+      "model": "llama3.2:1b",
+      "ms": 27130
+    },
+    "swarm-free": {
+      "text": "To find the number of minutes in 2.5 hours, we need to convert hours to minutes. There are 60 minutes in an hour.\n\n2.5 hours * 60 minutes/hour = 150 minutes\n\nSo, there are 150 minutes in 2.5 hours.",
+      "model": "llama3.2:3b",
+      "ms": 18690
+    },
+    "swarm-fuse": {
+      "text": "To find the number of minutes in 2.5 hours, we need to convert hours to minutes. There are 60 minutes in an hour.\n\n2.5 hours * 60 minutes per hour = 150 minutes\n\nSo, there are 150 minutes in 2.5 hours.",
+      "model": "llama3.2:3b",
+      "ms": 2761
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 27130
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3956,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18690
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2761
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 2068
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1583
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "qid": "q26",
+  "kind": "arithmetic",
+  "prompt": "It is 7:45 pm. What time will it be in 40 minutes?",
+  "gold": "8:25 pm",
+  "chain": {
+    "draft": "req-1791284106535-98eaf369-153",
+    "review": "req-1791284130551-20956f7c-154",
+    "free": "req-1791284134506-9eb7894c-155",
+    "fuse": "req-1791284152750-c00a40b4-156"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To find the time 40 minutes after 7:45 pm, we first add 40 minutes to 7:45 pm.\n\n7:45 pm + 40 minutes = 8:45 pm",
+      "model": "qwen2.5:0.5b",
+      "ms": 1674
+    },
+    "best-single": {
+      "text": "It will be 8:25 pm.",
+      "model": "llama3.2:3b",
+      "ms": 705
+    },
+    "draft-raw": {
+      "text": "To find the time in 40 minutes, add 40 minutes to the current time.\n\n7:45 pm + 40 minutes = 8:25 pm\n\nSo, it will be 8:25 pm.",
+      "model": "llama3.2:1b",
+      "ms": 24014
+    },
+    "swarm-free": {
+      "text": "To find the time in 40 minutes, add 40 minutes to the current time of 7:45 pm.\n\n7:45 pm + 40 minutes = 8:25 pm\n\nTherefore, it will be 8:25 pm.",
+      "model": "llama3.2:3b",
+      "ms": 18240
+    },
+    "swarm-fuse": {
+      "text": "To find the time in 40 minutes, add 40 minutes to the current time.\n\n7:45 pm + 40 minutes = 8:25 pm\n\nSo, it will be 8:25 pm.",
+      "model": "llama3.2:3b",
+      "ms": 2283
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 24014
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3951,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18240
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2283
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 1674
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 705
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "qid": "q23",
+  "kind": "arithmetic",
+  "prompt": "How many milliliters are in 2 liters?",
+  "gold": "2000",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289666900-c0b3f88e-67",
+    "free": "req-1791289669739-8144764c-68",
+    "fuse": "req-1791289672109-d1a00591-69"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find the number of milliliters in 2 liters, we need to know that 1 liter is equal to 1000 milliliters. Therefore, to convert 2 liters to milliliters, we multiply 2 by 1000.\n\n2 liters = 2 x 1000 = 2000 milliliters",
+      "model": "llama3.2:3b",
+      "ms": 2368
+    },
+    "swarm-fuse-3c": {
+      "text": "To find the number of milliliters in 2 liters, we need to know the conversion factor between liters and milliliters. The conversion factor is 1000 milliliters per liter.\n\nSo, to convert 2 liters to milliliters, we multiply 2 by 1000.\n\n2 liters = 2 x 1000 = 2000 milliliters",
+      "model": "llama3.2:3b",
+      "ms": 3384
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 2837,
+      "verdict": "FLAG",
+      "verdictLenient": "FLAG",
+      "text": "Here is the list of errors/gaps found in the draft answer:\n\n* The conversion factor between liters and milliliters is mentioned but not explicitly stated. (Missing part)\n* The draft answer assumes the conversion factor is already known, but it's not explicitly stated in the answer. (Missing part)\n\nFINAL VERDICT: FLAG"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2368
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3384
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

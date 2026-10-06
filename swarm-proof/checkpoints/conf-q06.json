@@ -1,0 +1,7 @@
+{
+  "qid": "q06",
+  "verdict": null,
+  "confidence": null,
+  "text": "CONFLICTING VALUES\n\n* Error: The statement says the temperature drops from 0°C to 0°C, but the ambient temperature of a freezer is usually around -18°C, which is greater than 0°C. This is a factual error.\n* Error: The statement implies the water freezes from 0°C, but the freezing point of water is indeed 0°C, not 0°C.\n* Error: The statement jumps to the conclusion that the temperature drops to 0°C, but it does not explain what happens to the temperature during the freezing process.\n* Error: The statement does not mention the concept of thermal equilibrium, which is necessary to determine if the temperature drops or stays the same.",
+  "ms": 31311
+}

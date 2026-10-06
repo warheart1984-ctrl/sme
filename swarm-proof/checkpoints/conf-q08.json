@@ -1,0 +1,7 @@
+{
+  "qid": "q08",
+  "verdict": null,
+  "confidence": 0.8,
+  "text": "CONFIDENCE: 0.80\n\nThere are several factual errors in the draft answer:\n\n* The total cost of the apples is $4.50, not $6.50. (Incorrect calculation)\n* The total amount spent is $6.50, not $3.50. (Incorrect calculation)\n* Sara's initial amount of money is $10, not $3.50. (Incorrect statement)\n\nThere are also some logical jumps in the draft answer:\n\n* The statement \"Sara had $10 initially, so she has $3.50 left\" is incorrect. The correct calculation is $10 - $6.50 = $3.50, not $3.50.\n* The statement \"She also bought a juice for $2\" is an unnecessary addition to the",
+  "ms": 34600
+}

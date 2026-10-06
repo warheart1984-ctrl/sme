@@ -1,0 +1,7 @@
+{
+  "qid": "q28",
+  "verdict": null,
+  "confidence": 0.8,
+  "text": "CONFIDENCE: 0.80\n\nErrors:\n\n* The calculation for Thu 9 is incorrect. It should be 9 + 9 = 18, not 9.\n* The calculation for Fri 20 is incorrect. It should be 20 + 20 = 40, not 20.\n* The answer \"Tuesday with 9 units sold\" is incorrect. The correct answer is \"Tuesday with 9 units sold\", but it should also include the day when the sales were lowest, which is actually Thu 9.\n\nFINAL VERDICT: MISSING\nCONFIDENCE: 0.80",
+  "ms": 27855
+}

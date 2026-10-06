@@ -1,0 +1,44 @@
+{
+  "qid": "q10",
+  "kind": "arithmetic",
+  "prompt": "Evaluate: 6 + 4 x 5 - 3 squared. Show the order of operations you used.",
+  "gold": "17 (4 x 5 = 20 and 3 squared = 9, so 6 + 20 - 9 = 17).",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289560412-b2f434e7-28",
+    "free": "req-1791289565149-4ef7b752-29",
+    "fuse": "req-1791289569372-6a3059ff-30"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To evaluate the expression 6 + 4 x 5 - 3 squared, we need to follow the order of operations (PEMDAS):\n\n1. Calculate the multiplication: 4 x 5 = 20\n2. Calculate the exponentiation: 3 squared = 3^2 = 9\n3. Rewrite the expression with the calculated values: (6 + 20) - 9\n4. Perform the addition and subtraction from left to right: (6 + 20) = 26, 26 - 9 = 17\n\nThe final answer is 17.",
+      "model": "llama3.2:3b",
+      "ms": 4221
+    },
+    "swarm-fuse-3c": {
+      "text": "(6 + 4 x 5) - 3 squared = (6 + 20) - 9",
+      "model": "llama3.2:3b",
+      "ms": 2105
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 4737,
+      "verdict": null,
+      "verdictLenient": null,
+      "text": "Here is the list of errors:\n\n* In step 3, it should be 6 + 20 - 9, but the correct order of operations would also consider the addition inside the parentheses, so it should be (6 + 20) - 9. However, given the expression only contains multiplication and addition/subtraction, we will not include this as an error.\n* The expression should have been evaluated as 4 x 5 = 20, then 3 squared = 9, then 6 + 20 - 9, but we will only list one error.\n\nThe corrected expression should be: (6 + 4 x 5) - 3 squared = ("
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 4221
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2105
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

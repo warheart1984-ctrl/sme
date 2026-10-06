@@ -1,0 +1,44 @@
+{
+  "qid": "q01",
+  "kind": "arithmetic",
+  "prompt": "A train leaves at 2:15 pm and arrives 3 hours and 45 minutes later. What time does it arrive? Show the arithmetic.",
+  "gold": "6:00 pm (14:15 + 3:45 = 18:00).",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289483753-12e11379-1",
+    "free": "req-1791289489082-045f7429-2",
+    "fuse": "req-1791289491277-969c235f-3"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find the arrival time, we need to add 3 hours and 45 minutes to the departure time.\n\n2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 45 minutes = 6:00 pm\n\nThe train arrives at 6:00 pm.",
+      "model": "llama3.2:3b",
+      "ms": 2193
+    },
+    "swarm-fuse-3c": {
+      "text": "2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 45 minutes = 6:00 pm\n\nThe train arrives at 6:00 pm.",
+      "model": "llama3.2:3b",
+      "ms": 2751
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 5316,
+      "verdict": null,
+      "verdictLenient": null,
+      "text": "Here is the list of errors:\n\n* The 45 minutes should be added to 5:15 pm, not the hour, so the correct calculation is: 5:15 pm + 45 minutes = 5:60 pm which is incorrect, the correct answer is 6:00 pm.\n* However, the train is already 3 hours and 45 minutes after 2:15 pm which is 5:15 pm\n* So, the train is 3 hours and 45 minutes later than 5:15 pm. \n\nThe train leaves at 2:15 pm and arrives 3 hours and 45 minutes later. Here is the correct calculation:\n\n2:15"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2193
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2751
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

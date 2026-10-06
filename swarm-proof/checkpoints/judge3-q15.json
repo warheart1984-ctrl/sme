@@ -1,0 +1,70 @@
+{
+  "qid": "q15",
+  "kind": "geography",
+  "candidates": {
+    "swarm-free-3c": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 13760
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 8,
+          "raw": "SCORE: 8",
+          "ms": 176
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 174
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 14760
+        }
+      ]
+    },
+    "swarm-fuse-3c": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 14016
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 8,
+          "raw": "SCORE: 8",
+          "ms": 184
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 9,
+          "raw": "SCORE: 9",
+          "ms": 179
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 15696
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "qid": "q13",
+  "kind": "analogy",
+  "prompt": "Complete the analogy: physician is to stethoscope as carpenter is to ____.",
+  "gold": "hammer (or saw - a carpenter's tool).",
+  "chain": {
+    "draft": "req-1791283381483-ccd3de16-75",
+    "review": "req-1791283403478-8fda351f-76",
+    "free": "req-1791283407976-63aec11e-77",
+    "fuse": "req-1791283426049-9098c9e0-78"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "Carpenter is to toolbox as physician is to stethoscope.",
+      "model": "qwen2.5:0.5b",
+      "ms": 600
+    },
+    "best-single": {
+      "text": "Hammer.",
+      "model": "llama3.2:3b",
+      "ms": 518
+    },
+    "draft-raw": {
+      "text": "The analogy is comparing a medical professional to an artisan who creates objects by hand.\n\nCarpenter is to woodshop as physician is to stethoscope.",
+      "model": "llama3.2:1b",
+      "ms": 21994
+    },
+    "swarm-free": {
+      "text": "The analogy is comparing a medical professional to an artisan who creates objects by hand.\n\nCarpenter is to toolbox as physician is to stethoscope.",
+      "model": "llama3.2:3b",
+      "ms": 18072
+    },
+    "swarm-fuse": {
+      "text": "The analogy is comparing a medical professional to an artisan who creates objects by hand.\n\nCarpenter is to woodshop as physician is to stethoscope.",
+      "model": "llama3.2:3b",
+      "ms": 1871
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 21994
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4496,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18072
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1871
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 600
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 518
+    }
+  }
+}

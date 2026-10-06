@@ -1,0 +1,67 @@
+{
+  "qid": "q10",
+  "kind": "arithmetic",
+  "prompt": "Evaluate: 6 + 4 x 5 - 3 squared. Show the order of operations you used.",
+  "gold": "17 (4 x 5 = 20 and 3 squared = 9, so 6 + 20 - 9 = 17).",
+  "chain": {
+    "draft": "req-1791283169323-95b5794a-57",
+    "review": "req-1791283210431-02f753e4-58",
+    "free": "req-1791283214659-aa7ac2af-59",
+    "fuse": "req-1791283236142-5f5830f7-60"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To evaluate the expression \\( 6 + 4 \\times 5 - 3^2 \\) using the correct order of operations (PEMDAS/BODMAS), we should follow these steps:\n\n1. **Parentheses/Brackets**: Since there are no parentheses or brackets in the expression, we start with the inside operations first.\n2. **Exponents/Orders**: We have the number 3 squared, which is \\( 3^2 = 9 \\).\n3. **Multiplication and Division**: These operations should be done from left to right, so \\( 4 \\times 5 = 20 \\).\n4",
+      "model": "qwen2.5:0.5b",
+      "ms": 3721
+    },
+    "best-single": {
+      "text": "To evaluate the expression, we'll follow the order of operations (PEMDAS):\n\n1. Multiply 4 and 5: 4 x 5 = 20\n2. Add 6 and 20: 6 + 20 = 26\n3. Square 3: 3^2 = 9\n4. Subtract 9 from 26: 26 - 9 = 17\n\nThe final result is 17.",
+      "model": "llama3.2:3b",
+      "ms": 3368
+    },
+    "draft-raw": {
+      "text": "To evaluate the expression 6 + 4 x 5 - 3 squared, we need to follow the order of operations (PEMDAS):\n\n1. Calculate the multiplication: 4 x 5 = 20\n2. Calculate the exponentiation: 3 squared = 3^2 = 9\n3. Rewrite the expression with the calculated values: 6 + 20 - 9\n4. Perform the addition and subtraction from left to right: 6 + 20 = 26, 26 - 9 = 17\n\nThe final answer is 17.",
+      "model": "llama3.2:1b",
+      "ms": 41106
+    },
+    "swarm-free": {
+      "text": "To evaluate the expression 6 + 4 x 5 - 3 squared, we need to follow the order of operations (PEMDAS):\n\n1. Calculate the multiplication: 4 x 5 = 20\n2. Calculate the exponentiation: 3 squared = 3^2 = 9\n3. Rewrite the expression with the calculated values: 6 + 20 - 9\n4. Perform the addition and subtraction from left to right: 6 + 20 = 26, 26 - 9 = 17\n\nThe final answer is 17.",
+      "model": "llama3.2:3b",
+      "ms": 21481
+    },
+    "swarm-fuse": {
+      "text": "To evaluate the expression 6 + 4 x 5 - 3 squared, we need to follow the order of operations (PEMDAS):\n\n1. Calculate the multiplication: 4 x 5 = 20\n2. Calculate the exponentiation: 3 squared = 3^2 = 9\n3. Rewrite the expression with the calculated values: 6 + 20 - 9\n4. Perform the addition and subtraction from left to right: 6 + 20 = 26, 26 - 9 = 17\n\nThe final answer is 17.",
+      "model": "llama3.2:3b",
+      "ms": 5002
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 41106
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4226,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 21481
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 5002
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3721
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 3368
+    }
+  }
+}

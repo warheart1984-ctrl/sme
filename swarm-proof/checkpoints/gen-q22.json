@@ -1,0 +1,67 @@
+{
+  "qid": "q22",
+  "kind": "logic",
+  "prompt": "If it is raining, then the ground is wet. The ground is wet. Does it follow that it is raining? Explain briefly.",
+  "gold": "No. This is the valid-in-reverse error (affirming the consequent); a wet lawn or hose could also cause it.",
+  "chain": {
+    "draft": "req-1791283871242-b91a089a-129",
+    "review": "req-1791283898128-8420c981-130",
+    "free": "req-1791283904168-5ada214c-131",
+    "fuse": "req-1791283923718-7f11accd-132"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "Yes, it follows that it is raining.",
+      "model": "qwen2.5:0.5b",
+      "ms": 402
+    },
+    "best-single": {
+      "text": "No, it does not necessarily follow that it is raining. The premises only establish a cause-and-effect relationship between rain and wet ground, but do not provide evidence that it is actually raining.",
+      "model": "llama3.2:3b",
+      "ms": 1692
+    },
+    "draft-raw": {
+      "text": "No, it does not follow that it is raining. The statement \"the ground is wet\" is a necessary but not sufficient condition for \"it is raining.\" Wetness can occur due to other factors, such as melting snow or irrigation, without rain.",
+      "model": "llama3.2:1b",
+      "ms": 26884
+    },
+    "swarm-free": {
+      "text": "It does not follow that it is raining. The statement \"the ground is wet\" is a necessary but not sufficient condition for \"it is raining.\" Wetness can occur due to other factors, such as melting snow or irrigation, without rain.",
+      "model": "llama3.2:3b",
+      "ms": 19548
+    },
+    "swarm-fuse": {
+      "text": "No, it does not follow that it is raining. The statement \"the ground is wet\" is a necessary but not sufficient condition for \"it is raining.\" Wetness can occur due to other factors, such as melting snow or irrigation, without rain.",
+      "model": "llama3.2:3b",
+      "ms": 2932
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 26884
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 6039,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 19548
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2932
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 402
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1692
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "qid": "q20",
+  "kind": "grammar",
+  "candidates": {
+    "swarm-free-3c": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 13704
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 177
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 177
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 14694
+        }
+      ]
+    },
+    "swarm-fuse-3c": {
+      "scores": [
+        {
+          "judge": "llama3.2:3b",
+          "pass": 1,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 15091
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 2,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 184
+        },
+        {
+          "judge": "llama3.2:3b",
+          "pass": 3,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 173
+        },
+        {
+          "judge": "qwen2.5:3b",
+          "pass": 1,
+          "score": 10,
+          "raw": "SCORE: 10",
+          "ms": 14635
+        }
+      ]
+    }
+  }
+}

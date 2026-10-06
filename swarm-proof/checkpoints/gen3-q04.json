@@ -1,0 +1,44 @@
+{
+  "qid": "q04",
+  "kind": "arithmetic",
+  "prompt": "A baker has 12 eggs. Each cake needs 3 eggs. How many cakes can she bake, and how many eggs are left over?",
+  "gold": "4 cakes, 0 eggs left over.",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": true,
+  "chain": {
+    "review": "req-1791289507600-0af2a163-10",
+    "free": "req-1791289511016-489bdec1-11",
+    "fuse": "req-1791289513779-5d539a15-12"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find out how many cakes the baker can bake and how many eggs are left over, we need to divide the total number of eggs by the number of eggs needed per cake.\n\n12 eggs / 3 eggs per cake = 4 cakes\n\nThe baker can bake 4 cakes, using 12 eggs. There are no eggs left over because 12 eggs are exactly enough for 4 cakes.",
+      "model": "llama3.2:3b",
+      "ms": 2761
+    },
+    "swarm-fuse-3c": {
+      "text": "To find out how many cakes the baker can bake and how many eggs are left over, we need to divide the total number of eggs by the number of eggs needed per cake.\n\n12 eggs / 3 eggs per cake = 4 cakes\n\nThe baker can bake 4 cakes, using 12 eggs. There are no eggs left over, as 12 eggs are exactly enough for 4 cakes.",
+      "model": "llama3.2:3b",
+      "ms": 3708
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 3414,
+      "verdict": "PASS",
+      "verdictLenient": "PASS",
+      "text": "Here is the list of errors:\n\n* The division is correct, but the interpretation of the result is incorrect. If 12 eggs are exactly enough for 4 cakes, then there should be no eggs left over.\n* The statement that there are no eggs left over is a logical conclusion, but it contradicts the fact that 12 eggs are exactly enough for 4 cakes.\n\nFINAL VERDICT: PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2761
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3708
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

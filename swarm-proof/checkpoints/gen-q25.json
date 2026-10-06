@@ -1,0 +1,67 @@
+{
+  "qid": "q25",
+  "kind": "arithmetic",
+  "prompt": "Three friends split a 45-pound bill equally. How much does each pay?",
+  "gold": "15 pounds each",
+  "chain": {
+    "draft": "req-1791284057419-10aa27d9-147",
+    "review": "req-1791284080542-ddd43620-148",
+    "free": "req-1791284084488-5f2bd6ea-149",
+    "fuse": "req-1791284102060-87ea7258-150"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To determine how much each friend pays, you can divide the total bill by the number of friends. Here's the calculation:\n\n45 pounds ÷ 3 friends = 15 pounds each\n\nSo, each friend pays 15 pounds.",
+      "model": "qwen2.5:0.5b",
+      "ms": 1696
+    },
+    "best-single": {
+      "text": "Each friend pays $15.",
+      "model": "llama3.2:3b",
+      "ms": 655
+    },
+    "draft-raw": {
+      "text": "To find out how much each friend pays, divide the total bill (45 pounds) by the number of friends (3).\n\n45 pounds ÷ 3 friends = 15 pounds per friend.",
+      "model": "llama3.2:1b",
+      "ms": 23121
+    },
+    "swarm-free": {
+      "text": "To find out how much each friend pays, divide the total bill by the number of friends.\n\n15 pounds per friend.",
+      "model": "llama3.2:3b",
+      "ms": 17570
+    },
+    "swarm-fuse": {
+      "text": "To find out how much each friend pays, divide the total bill (45 pounds) by the number of friends (3).\n\n45 pounds ÷ 3 friends = 15 pounds per friend.",
+      "model": "llama3.2:3b",
+      "ms": 2080
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 23121
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3945,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 17570
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2080
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 1696
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 655
+    }
+  }
+}

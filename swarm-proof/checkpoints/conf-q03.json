@@ -1,0 +1,7 @@
+{
+  "qid": "q03",
+  "verdict": "PASS",
+  "confidence": 0.8,
+  "text": "CONFIDENCE: 0.80\n\nHere are the errors and gaps found in the draft answer:\n\n1. The capital of Iceland is actually Reykjavik, not Reykjavik. (Incorrect capital)\n2. The population of Reykjavik as of the 2020 census is approximately 134,000, not 129,600. (Incorrect population)\n3. The question asks for the population, not the capital. (Missing population)\n4. The question also asks for the capital, not the population. (Missing capital)\n\nSince the draft contains factual errors, wrong arithmetic, illogical jumps, and missing parts, I will not be able to provide a final verdict of PASS.",
+  "ms": 31096
+}

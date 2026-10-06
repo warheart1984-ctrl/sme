@@ -1,0 +1,44 @@
+{
+  "qid": "q12",
+  "kind": "arithmetic",
+  "prompt": "What is two-thirds of 48?",
+  "gold": "32",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289584279-372ae339-34",
+    "free": "req-1791289589455-6da27f2e-35",
+    "fuse": "req-1791289591466-4da3f365-36"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find two-thirds of 48, you multiply 48 by 2/3.\n\n48 × 2/3 = (48 × 2) ÷ 3 = 96 ÷ 3 = 32\n\nSo, two-thirds of 48 is 32.",
+      "model": "llama3.2:3b",
+      "ms": 2011
+    },
+    "swarm-fuse-3c": {
+      "text": "48 × 2/3 = 48 × 2 ÷ 3 = 96 ÷ 3 = 32",
+      "model": "llama3.2:3b",
+      "ms": 1901
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 5174,
+      "verdict": null,
+      "verdictLenient": null,
+      "text": "Here's the list of errors:\n\n* 48 × 2 ÷ 3 = 96/3 = 32 is incorrect. The correct calculation is 48 × 2/3 = 48 × 2 ÷ 3 = 96 ÷ 3 = 32. However, the multiplication should be done before the division, so the correct calculation is (48 × 2) ÷ 3 = 96 ÷ 3 = 32.\n \nHowever, the error is the incorrect placement of multiplication and division. But the numbers are correct.\n\nSo, the correct calculation should be (48 × 2) ÷ 3 = 96 ÷ "
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2011
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1901
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

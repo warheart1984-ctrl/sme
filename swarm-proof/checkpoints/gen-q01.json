@@ -1,0 +1,67 @@
+{
+  "qid": "q01",
+  "kind": "arithmetic",
+  "prompt": "A train leaves at 2:15 pm and arrives 3 hours and 45 minutes later. What time does it arrive? Show the arithmetic.",
+  "gold": "6:00 pm (14:15 + 3:45 = 18:00).",
+  "chain": {
+    "draft": "req-1791282650421-e483483c-3",
+    "review": "req-1791282675766-a53c4755-4",
+    "free": "req-1791282680008-040275ba-5",
+    "fuse": "req-1791282698920-ca212b66-6"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To determine the time the train arrives, we need to add 3 hours and 45 minutes to the departure time, 2:15 pm.\n\nFirst, let's break it down:\n\n1. Adding 3 hours to 2:15 pm:\n   - 3 hours is 180 minutes (3 hours * 60 minutes/hour).\n   - Adding 180 minutes to 2:15 pm gives us 4:15 pm.\n\n2. Now, we add the additional 45 minutes:\n   - Adding 45 minutes to 4:15 pm gives us ",
+      "model": "qwen2.5:0.5b",
+      "ms": 5380
+    },
+    "best-single": {
+      "text": "To find the arrival time, add 3 hours and 45 minutes to the departure time:\n\n2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 45 minutes = 5:60 pm ( convert 45 minutes to hours and minutes: 45 minutes = 0 hours + 45 minutes, then add to 5:15 pm: 5 hours + 45 minutes = 6:00 pm)\n\nSo, the train arrives at 6:00 pm.",
+      "model": "llama3.2:3b",
+      "ms": 5681
+    },
+    "draft-raw": {
+      "text": "To find the arrival time, we need to add 3 hours and 45 minutes to the departure time.\n\n2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 45 minutes = 5:50 pm\n\nThe train arrives at 5:50 pm.",
+      "model": "llama3.2:1b",
+      "ms": 25344
+    },
+    "swarm-free": {
+      "text": "To find the arrival time, we need to add 3 hours and 45 minutes to the departure time.\n\n2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 45 minutes = 6:00 pm\n\nThe train arrives at 6:00 pm.",
+      "model": "llama3.2:3b",
+      "ms": 18910
+    },
+    "swarm-fuse": {
+      "text": "To find the arrival time, we need to add 3 hours and 45 minutes to the departure time.\n\n2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 45 minutes = 5:50 pm\n\nThe train arrives at 5:50 pm.",
+      "model": "llama3.2:3b",
+      "ms": 2962
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 25344
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4240,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18910
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2962
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 5380
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 5681
+    }
+  }
+}

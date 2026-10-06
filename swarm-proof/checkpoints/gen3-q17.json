@@ -1,0 +1,44 @@
+{
+  "qid": "q17",
+  "kind": "logic",
+  "prompt": "All cats are mammals. All tigers are mammals. Does it follow that all cats are tigers? Explain briefly.",
+  "gold": "No. Sharing the class 'mammals' does not imply the two groups are the same or overlap.",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289614642-f821d30a-49",
+    "free": "req-1791289617071-ae71400a-50",
+    "fuse": "req-1791289619424-ef4e8384-51"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "It does not follow that all cats are tigers. Cats and tigers belong to different species (Felis for cats and Panthera for tigers), which indicates they are distinct groups, despite sharing a common characteristic as mammals.",
+      "model": "llama3.2:3b",
+      "ms": 2351
+    },
+    "swarm-fuse-3c": {
+      "text": "All cats are mammals. All tigers are mammals. Does it follow that all cats are tigers? Explain briefly.\n\nNo, it does not follow that all cats are tigers. The difference in their species names (Felis for cats and Panthera for tigers) indicates that they are distinct groups, despite being classified as mammals. While all tigers are indeed cats, not all cats are tigers.",
+      "model": "llama3.2:3b",
+      "ms": 3604
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 2428,
+      "verdict": "FLAG",
+      "verdictLenient": "FLAG",
+      "text": "Here is the list of errors:\n\n* The draft answer does not provide a clear definition of what it means by \"species\".\n* The draft answer assumes that the classification of cats and tigers into the same species is irrelevant to the conclusion.\n\nFINAL VERDICT: FLAG"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2351
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3604
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

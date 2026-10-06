@@ -1,0 +1,67 @@
+{
+  "qid": "q23",
+  "kind": "arithmetic",
+  "prompt": "How many milliliters are in 2 liters?",
+  "gold": "2000",
+  "chain": {
+    "draft": "req-1791283928751-fce31abe-135",
+    "review": "req-1791283959351-9fce41cf-136",
+    "free": "req-1791283963055-7181d0d1-137",
+    "fuse": "req-1791283988248-ac77ab3f-138"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "2 liters is equal to 2000 milliliters.",
+      "model": "qwen2.5:0.5b",
+      "ms": 1119
+    },
+    "best-single": {
+      "text": "There are 2000 milliliters in 2 liters.",
+      "model": "llama3.2:3b",
+      "ms": 969
+    },
+    "draft-raw": {
+      "text": "To find the number of milliliters in 2 liters, we need to know the conversion factor between liters and milliliters.\n\n1 liter is equal to 1000 milliliters.\n\nSo, to convert 2 liters to milliliters, we multiply 2 by 1000.\n\n2 liters = 2 x 1000 = 2000 milliliters",
+      "model": "llama3.2:1b",
+      "ms": 30598
+    },
+    "swarm-free": {
+      "text": "To find the number of milliliters in 2 liters, we need to know the conversion factor between liters and milliliters. \n\n1 liter is equal to 1000 milliliters. \n\nSo, to convert 2 liters to milliliters, we multiply 2 by 1000.\n\n2 liters = 2 x 1000 = 2000 milliliters",
+      "model": "llama3.2:3b",
+      "ms": 25189
+    },
+    "swarm-fuse": {
+      "text": "To find the number of milliliters in 2 liters, we need to know the conversion factor between liters and milliliters.\n\n1 liter is equal to 1000 milliliters.\n\nSo, to convert 2 liters to milliliters, we multiply 2 by 1000.\n\n2 liters = 2 x 1000 = 2000 milliliters",
+      "model": "llama3.2:3b",
+      "ms": 3503
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 30598
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3702,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 25189
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3503
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 1119
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 969
+    }
+  }
+}

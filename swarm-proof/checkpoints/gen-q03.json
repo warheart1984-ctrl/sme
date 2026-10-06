@@ -1,0 +1,67 @@
+{
+  "qid": "q03",
+  "kind": "geography",
+  "prompt": "What is the capital of Iceland, and roughly what is its population?",
+  "gold": "Reykjavik; roughly 120,000-140,000.",
+  "chain": {
+    "draft": "req-1791282766421-4190e9b5-15",
+    "review": "req-1791282788532-fc003e07-16",
+    "free": "req-1791282792744-f80c18fb-17",
+    "fuse": "req-1791282809753-33fafd9c-18"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "The capital of Iceland is Reykjavík, and its population is approximately 310,000.",
+      "model": "qwen2.5:0.5b",
+      "ms": 2568
+    },
+    "best-single": {
+      "text": "The capital of Iceland is Reykjavik. The population of Reykjavik is approximately 127,000 people.",
+      "model": "llama3.2:3b",
+      "ms": 5130
+    },
+    "draft-raw": {
+      "text": "The capital of Iceland is Reykjavik. As of the 2020 census, the population of Reykjavik is approximately 129,600.",
+      "model": "llama3.2:1b",
+      "ms": 22111
+    },
+    "swarm-free": {
+      "text": "The capital of Iceland is Reykjavik, with a population of approximately 128,740, as of the 2020 census.",
+      "model": "llama3.2:3b",
+      "ms": 17008
+    },
+    "swarm-fuse": {
+      "text": "The capital of Iceland is Reykjavik. As of the 2020 census, the population of Reykjavik is approximately 129,600.",
+      "model": "llama3.2:3b",
+      "ms": 1845
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 22111
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4211,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 17008
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1845
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 2568
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 5130
+    }
+  }
+}

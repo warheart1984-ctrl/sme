@@ -1,0 +1,67 @@
+{
+  "qid": "q17",
+  "kind": "logic",
+  "prompt": "All cats are mammals. All tigers are mammals. Does it follow that all cats are tigers? Explain briefly.",
+  "gold": "No. Sharing the class 'mammals' does not imply the two groups are the same or overlap.",
+  "chain": {
+    "draft": "req-1791283573954-d0e482dc-99",
+    "review": "req-1791283601283-afc639fd-100",
+    "free": "req-1791283605246-1825ca8b-101",
+    "fuse": "req-1791283623252-b364e13c-102"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "No, it does not follow that all cats are tigers. While it is true that all tigers are mammals, the question asks if all cats are tigers. While some cats are tigers (such as some felines), not all cats are tigers.",
+      "model": "qwen2.5:0.5b",
+      "ms": 1372
+    },
+    "best-single": {
+      "text": "No, it does not follow. The categories \"cats\" and \"tigers\" are not the same; they are distinct species. Just because all tigers are mammals and all cats are mammals, it does not imply a direct relationship between the two species.",
+      "model": "llama3.2:3b",
+      "ms": 2143
+    },
+    "draft-raw": {
+      "text": "No, it does not follow that all cats are tigers. The difference in their species names (Felis for cats and Panthera for tigers) indicates that they are distinct groups, despite being classified as mammals. While all tigers are indeed cats, not all cats are tigers.",
+      "model": "llama3.2:1b",
+      "ms": 27326
+    },
+    "swarm-free": {
+      "text": "No, it does not follow that all cats are tigers. The difference in their species names (Felis for cats and Panthera for tigers) indicates that they are distinct groups, despite being classified as mammals. While all tigers are indeed cats, not all cats are tigers.",
+      "model": "llama3.2:3b",
+      "ms": 18005
+    },
+    "swarm-fuse": {
+      "text": "No, it does not follow that all cats are tigers. The difference in their species names (Felis for cats and Panthera for tigers) indicates that they are distinct groups, despite being classified as mammals. While all tigers are indeed cats, not all cats are tigers.",
+      "model": "llama3.2:3b",
+      "ms": 2866
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 27326
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3960,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18005
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2866
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 1372
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 2143
+    }
+  }
+}

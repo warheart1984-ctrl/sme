@@ -1,0 +1,7 @@
+{
+  "qid": "q19",
+  "verdict": "FLAG",
+  "confidence": 0,
+  "text": "FINAL VERDICT: FLAG\nCONFIDENCE: 0.00\n\nThere are several errors in the draft answer:\n\n1. The calculation for the discount is incorrect. A 25% discount on the original price of $80 should be calculated as 0.25 * $80 = $20, not $80 - $20.\n2. The correct calculation for the sale price should be $80 - $20 = $60, not $60.\n3. The draft answer implies that the discount is 25%, but it does not specify the discount amount. It should be stated as a discount percentage (e.g., \"a 25% discount\").\n4. The draft answer does not provide enough context to understand the calculation. It should clarify that the original price is $80 and",
+  "ms": 34688
+}

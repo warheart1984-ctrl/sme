@@ -1,0 +1,44 @@
+{
+  "qid": "q28",
+  "kind": "reading",
+  "prompt": "A shop recorded daily sales: Mon 12, Tue 9, Wed 15, Thu 9, Fri 20. Which day(s) had the lowest sales, and what number?",
+  "gold": "Tuesday and Thursday, 9 each.",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289702398-a0511d3d-82",
+    "free": "req-1791289705844-73ba918c-83",
+    "fuse": "req-1791289708834-c0325dfe-84"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find the day(s) with the lowest sales, we need to calculate the total sales for each day.\n\nMon 12: 12\nTue 9: 9\nWed 15: 15\nThu 9: 9\nFri 20: 20\n\nThe lowest sales day is Tuesday with 9 units sold, and Thursday with 9 units sold, as they have the same number of units sold.",
+      "model": "llama3.2:3b",
+      "ms": 2989
+    },
+    "swarm-fuse-3c": {
+      "text": "To find the day(s) with the lowest sales, we need to calculate the total sales for each day.\n\nMon 12: 12\nTue 9: 9\nWed 15: 15\nThu 9: 9\nFri 20: 20\n\nThe lowest sales day is Tuesday with 9 units sold. The lowest sales day is also Thursday with 9 units sold.",
+      "model": "llama3.2:3b",
+      "ms": 3765
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 3445,
+      "verdict": "FLAG",
+      "verdictLenient": "FLAG",
+      "text": "Here is the list of errors:\n\n* The calculation for Thu 9 is incorrect. It should be \"9\" as a single unit, not a sum of two numbers.\n* The lowest sales day is not Tuesday with 9 units sold. It is Tuesday with 9 units sold, but the day with the lowest sales is also Thu 9, which has the same number of units sold.\n\nFINAL VERDICT: FLAG"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2989
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3765
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

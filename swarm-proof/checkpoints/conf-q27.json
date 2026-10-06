@@ -1,0 +1,7 @@
+{
+  "qid": "q27",
+  "verdict": "PASS",
+  "confidence": null,
+  "text": "Errors:\n\n* The sentence starts with \"Answer in one sentence,\" which is a common phrase used in grading assignments, but it's not a typical way to end a draft answer. A more common way to end a sentence would be with a question mark (?).\n* The sentence \"a process essential for the delivery of oxygen and removal of waste products\" is not a clear or concise summary of the main function of red blood cells. It's a bit too vague and doesn't directly state what red blood cells do.\n* The sentence \"The main function of red blood cells in the human body is to carry oxygen from the lungs to the body's tissues and carbon dioxide back to the lungs\" is still a bit wordy and could be condensed for better clarity.\n\nFINAL VERDICT: PASS\nCONF",
+  "ms": 35311
+}

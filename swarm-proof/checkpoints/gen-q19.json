@@ -1,0 +1,67 @@
+{
+  "qid": "q19",
+  "kind": "arithmetic",
+  "prompt": "A shirt costs $80. It is discounted 25%. What is the sale price?",
+  "gold": "$60 (25% of 80 is 20, so 80 - 20 = 60).",
+  "chain": {
+    "draft": "req-1791283704360-d3c1c7f1-111",
+    "review": "req-1791283733116-fec96806-112",
+    "free": "req-1791283737446-dc343bd9-113",
+    "fuse": "req-1791283755950-11c09587-114"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To determine the sale price, we need to calculate 25% of the original price of $80 and then subtract that from the original price. \n\n25% of $80 is calculated as: \n\\[ 0.25 \\times 80 = 20 \\]\n\nSo, the sale price is the original price minus the discount:\n\\[ 80 - 20 = 60 \\]\n\nTherefore, the sale price is $60.",
+      "model": "qwen2.5:0.5b",
+      "ms": 2359
+    },
+    "best-single": {
+      "text": "To find the sale price, calculate 25% of the original price:\n\n$80 x 0.25 = $20\n\nSubtract the discount from the original price:\n\n$80 - $20 = $60\n\nThe sale price is $60.",
+      "model": "llama3.2:3b",
+      "ms": 2094
+    },
+    "draft-raw": {
+      "text": "To find the sale price, calculate 25% of the original price and subtract it from the original price.\n\n25% of $80 = 0.25 x $80 = $20\n\nSale price = Original price - Discount\n= $80 - $20\n= $60\n\nThe sale price of the shirt is $60.",
+      "model": "llama3.2:1b",
+      "ms": 28752
+    },
+    "swarm-free": {
+      "text": "To find the sale price, calculate 25% of the original price and subtract it from the original price.\n\n25% of $80 = 0.25 x $80 = $20\n\nSale price = Original price - Discount\n= $80 - $20\n= $60\n\nThe sale price of the shirt is $60.",
+      "model": "llama3.2:3b",
+      "ms": 18502
+    },
+    "swarm-fuse": {
+      "text": "To find the sale price, calculate 25% of the original price and subtract it from the original price.\n\n25% of $80 = 0.25 x $80 = $20\n\nSale price = Original price - Discount\n= $80 - $20\n= $60\n\nThe sale price of the shirt is $60.",
+      "model": "llama3.2:3b",
+      "ms": 3140
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 28752
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4329,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 18502
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3140
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 2359
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 2094
+    }
+  }
+}

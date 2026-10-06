@@ -1,0 +1,67 @@
+{
+  "qid": "q15",
+  "kind": "geography",
+  "prompt": "What is the capital city of Australia?",
+  "gold": "Canberra (not Sydney or Melbourne).",
+  "chain": {
+    "draft": "req-1791283474242-ebf1e858-87",
+    "review": "req-1791283490909-7f006100-88",
+    "free": "req-1791283495089-f2aa623c-89",
+    "fuse": "req-1791283511471-e61db753-90"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "The capital city of Australia is Canberra.",
+      "model": "qwen2.5:0.5b",
+      "ms": 353
+    },
+    "best-single": {
+      "text": "Canberra.",
+      "model": "llama3.2:3b",
+      "ms": 360
+    },
+    "draft-raw": {
+      "text": "The capital city of Australia is Canberra.",
+      "model": "llama3.2:1b",
+      "ms": 16662
+    },
+    "swarm-free": {
+      "text": "Canberra is the capital city of Australia.",
+      "model": "llama3.2:3b",
+      "ms": 16380
+    },
+    "swarm-fuse": {
+      "text": "The capital city of Australia is Canberra.",
+      "model": "llama3.2:3b",
+      "ms": 876
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 16662
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 4179,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 16380
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 876
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 353
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 360
+    }
+  }
+}

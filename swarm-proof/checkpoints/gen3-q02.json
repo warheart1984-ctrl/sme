@@ -1,0 +1,44 @@
+{
+  "qid": "q02",
+  "kind": "logic",
+  "prompt": "All roses are flowers. Some flowers fade quickly. Does it follow that some roses fade quickly? Explain briefly.",
+  "gold": "No. The premise says some flowers fade quickly, but roses may be a subset of flowers that do not fade quickly. No valid conclusion.",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": true,
+  "chain": {
+    "review": "req-1791289494042-6afbe144-4",
+    "free": "req-1791289496372-987c53c3-5",
+    "fuse": "req-1791289498474-c2c1b09e-6"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "All roses are flowers, and some flowers fade quickly. Therefore, it logically follows that some roses also fade quickly, as they are a subset of the flowers that are known to fade quickly.",
+      "model": "llama3.2:3b",
+      "ms": 2100
+    },
+    "swarm-fuse-3c": {
+      "text": "No, it does not follow that some roses fade quickly. The statement \"All roses are flowers\" is a generalization, not a specific claim. It does not imply that every rose will fade quickly. There could be exceptions, such as hybrid teas or floribundas that are bred for their long-lasting blooms.",
+      "model": "llama3.2:3b",
+      "ms": 2982
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 2328,
+      "verdict": "FLAG",
+      "verdictLenient": "FLAG",
+      "text": "Here is the review:\n\n1. The draft answer does not provide a clear explanation of why some flowers fade quickly.\n2. The conclusion that \"some roses fade quickly\" is not supported by the provided information.\n\nFINAL VERDICT: FLAG"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2100
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2982
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

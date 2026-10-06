@@ -1,0 +1,44 @@
+{
+  "qid": "q25",
+  "kind": "arithmetic",
+  "prompt": "Three friends split a 45-pound bill equally. How much does each pay?",
+  "gold": "15 pounds each",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": false,
+  "chain": {
+    "review": "req-1791289681412-530b3507-73",
+    "free": "req-1791289684490-4c697411-74",
+    "fuse": "req-1791289686382-e856c135-75"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find out how much each friend pays, divide the total bill by the number of friends.\n\n45 pounds ÷ 3 friends = $15 per friend.",
+      "model": "llama3.2:3b",
+      "ms": 1892
+    },
+    "swarm-fuse-3c": {
+      "text": "To find out how much each friend pays, divide the total bill (45 pounds) by the number of friends (3).\n\n45 pounds ÷ 3 friends = 15 pounds per friend.\n\nEach pays $15.",
+      "model": "llama3.2:3b",
+      "ms": 2304
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 3076,
+      "verdict": "FLAG",
+      "verdictLenient": "FLAG",
+      "text": "Here is the list of errors:\n\n1. The unit of measurement for the bill should be specified. The answer is given in pounds, but the unit for the individual share is not clear (is it pounds, dollars, etc.).\n2. The division operation is correct, but the answer is not provided in a clear format (e.g., \"each pays $15\").\n\nFINAL VERDICT: FLAG"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1892
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2304
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

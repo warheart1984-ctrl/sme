@@ -1,0 +1,67 @@
+{
+  "qid": "q06",
+  "kind": "science",
+  "prompt": "A glass of water is left in a freezer overnight. The water freezes. Did the temperature of the water drop or stay the same while it was freezing? Explain in one sentence.",
+  "gold": "Temperature stays at 0 C (freezing point) while the phase change happens; it drops after all ice forms.",
+  "chain": {
+    "draft": "req-1791282922489-135c06fb-33",
+    "review": "req-1791282943519-e6c661b3-34",
+    "free": "req-1791282949220-49a471da-35",
+    "fuse": "req-1791282966372-92a09e0a-36"
+  },
+  "fuseKept": false,
+  "candidates": {
+    "weakest-single": {
+      "text": "The temperature of the water dropped while it was freezing.",
+      "model": "qwen2.5:0.5b",
+      "ms": 697
+    },
+    "best-single": {
+      "text": "The temperature of the water dropped as it froze overnight in the freezer.",
+      "model": "llama3.2:3b",
+      "ms": 851
+    },
+    "draft-raw": {
+      "text": "The temperature of the water dropped from the ambient temperature of the freezer (usually around 0°C) to 0°C, as it froze.",
+      "model": "llama3.2:1b",
+      "ms": 21030
+    },
+    "swarm-free": {
+      "text": "The temperature of the water dropped from the ambient temperature of the freezer to 0°C while it was freezing.",
+      "model": "llama3.2:3b",
+      "ms": 17150
+    },
+    "swarm-fuse": {
+      "text": "The temperature of the water dropped from the ambient temperature of the freezer to 0°C while it was freezing.",
+      "model": "llama3.2:3b",
+      "ms": 1736
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 21030
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 5700,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 17150
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1736
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 697
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 851
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "qid": "q12",
+  "verdict": null,
+  "confidence": 0,
+  "text": "CONsidering the draft answer, I've identified the following errors:\n\n* The correct calculation is 48 × 2 = 96, not 48 × 2/3 = 96/3 = 32.\n* The correct calculation is 96 ÷ 3 = 32, not 96/3 = 32.\n* The correct calculation is 48 × 2/3 = 32, not 48 × 2/3 = 96/3 = 32.\n\nFINAL VERDICT: FALSE\n\nCONFIDENCE: 0.00",
+  "ms": 25819
+}

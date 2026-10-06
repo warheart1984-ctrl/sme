@@ -1,0 +1,44 @@
+{
+  "qid": "q27",
+  "kind": "science",
+  "prompt": "What is the main function of red blood cells in the human body? Answer in one sentence.",
+  "gold": "They carry oxygen from the lungs to the body's tissues.",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": true,
+  "chain": {
+    "review": "req-1791289697318-7f452d28-79",
+    "free": "req-1791289698174-ea0b49a1-80",
+    "fuse": "req-1791289700254-ccd47ed2-81"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "The main function of red blood cells in the human body is to carry oxygen from the lungs to the body's tissues and carbon dioxide back to the lungs, a process essential for the delivery of oxygen and removal of waste products.",
+      "model": "llama3.2:3b",
+      "ms": 2079
+    },
+    "swarm-fuse-3c": {
+      "text": "The main function of red blood cells in the human body is to carry oxygen from the lungs to the body's tissues and carbon dioxide back to the lungs, a process essential for the delivery of oxygen and removal of waste products.",
+      "model": "llama3.2:3b",
+      "ms": 2136
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 855,
+      "verdict": "PASS",
+      "verdictLenient": "PASS",
+      "text": "FINAL VERDICT: PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2079
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2136
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

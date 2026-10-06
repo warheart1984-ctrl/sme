@@ -1,0 +1,44 @@
+{
+  "qid": "q09",
+  "kind": "arithmetic",
+  "prompt": "How many minutes are in 2.5 hours? Show the arithmetic.",
+  "gold": "150 minutes (2.5 x 60 = 150).",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": true,
+  "chain": {
+    "review": "req-1791289552291-a24d70b0-25",
+    "free": "req-1791289555482-6be879fb-26",
+    "fuse": "req-1791289557561-87b67568-27"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find the number of minutes in 2.5 hours, we need to convert hours to minutes. There are 60 minutes in an hour.\n\n2.5 hours * 60 minutes per hour = 150 minutes\n\nSo, there are 150 minutes in 2.5 hours.",
+      "model": "llama3.2:3b",
+      "ms": 2078
+    },
+    "swarm-fuse-3c": {
+      "text": "To find the number of minutes in 2.5 hours, we need to convert hours to minutes. There are 60 minutes in an hour.\n\n2.5 hours * 60 minutes per hour = 150 minutes\n\nSo, there are 150 minutes in 2.5 hours.",
+      "model": "llama3.2:3b",
+      "ms": 2842
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 3191,
+      "verdict": "PASS",
+      "verdictLenient": "PASS",
+      "text": "Here is the list of errors found in the draft answer:\n\n* The conversion rate from hours to minutes is assumed to be 1 hour = 60 minutes, which is correct.\n* However, the calculation itself is correct: 2.5 hours * 60 minutes per hour = 150 minutes.\n* No logical jumps or missing parts were found.\n\nFINAL VERDICT: PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2078
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2842
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

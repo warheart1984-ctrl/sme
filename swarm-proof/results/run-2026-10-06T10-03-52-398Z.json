@@ -1,0 +1,290 @@
+{
+  "startedAt": "2026-10-06T10:03:52.398Z",
+  "config": {
+    "models": {
+      "weak": "qwen2.5:0.5b",
+      "mid": "llama3.2:1b",
+      "best": "llama3.2:3b"
+    },
+    "temperature": 0
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "A train leaves at 2:15 pm and arrives 3 hours and 45 minutes later. What time does it arrive? Show the arithmetic.",
+      "gold": "6:00 pm (14:15 + 3:45 = 18:00).",
+      "candidates": {
+        "weakest-single": {
+          "text": "To determine the time the train arrives, we need to add 3 hours and 45 minutes to the departure time, 2:15 pm.\n\nFirst, let's break it down:\n\n1. Adding 3 hours to 2:15 pm:\n   - 3 hours is 180 minutes (3 hours * 60 minutes/hour).\n   - Adding 180 minutes to 2:15 pm gives us 4:15 pm.\n\n2. Now, we add the additional 45 minutes:\n   - Adding 45 minutes to 4:15 pm gives us ",
+          "score": 6
+        },
+        "best-single": {
+          "text": "To find the arrival time, add 3 hours and 45 minutes to the departure time:\n\n2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 45 minutes = 5:60 pm ( convert 45 minutes to hours and minutes: 45 minutes = 0 hours + 45 minutes, then add to 5:15 pm: 5 hours + 45 minutes = 6:00 pm)\n\nSo, the train arrives at 6:00 pm.",
+          "score": 9
+        },
+        "draft-raw": {
+          "text": "To find the arrival time, we need to add 3 hours and 45 minutes to the departure time.\n\n2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 45 minutes = 5:50 pm\n\nThe train arrives at 5:50 pm.",
+          "score": 10
+        },
+        "swarm-final": {
+          "text": "A train leaves at 2:15 pm and arrives 3 hours and 45 minutes later. Show the arithmetic.\n\n1. First, convert 3 hours and 45 minutes into just hours by adding the 45 minutes to 3 hours:\n3 hours + 45 minutes = 3.75 hours\n\n2. Now add 3.75 hours to the initial departure time of 2:15 pm:\n2:15 pm + 3 hours = 5:15 pm\n5:15 pm + 0.75 hours = 5:15 pm + 45 minutes = 5:50 pm\n\nThe train arrives at 5:50 pm.",
+          "score": 4
+        }
+      },
+      "swarmChain": {
+        "draft": "req-1791281046865-cd177c8a-3",
+        "critique": "req-1791281075031-2b469566-4",
+        "adjudicator": "req-1791281081497-5da731b9-5"
+      }
+    },
+    {
+      "id": "q2",
+      "prompt": "All roses are flowers. Some flowers fade quickly. Does it follow that some roses fade quickly? Explain why or why not.",
+      "gold": "No. The premises do not say flowers that fade quickly include any roses; 'some flowers' may be entirely non-roses.",
+      "candidates": {
+        "weakest-single": {
+          "text": "Yes, it follows that some roses fade quickly. Roses are a type of flower, and all flowers are a type of rose. Therefore, if some flowers fade quickly, they must be some roses.",
+          "score": 8
+        },
+        "best-single": {
+          "text": "Yes, it does follow that some roses fade quickly. The reasoning is as follows:\n\n1. All roses are flowers.\n2. Some flowers fade quickly.\n3. Roses are a type of flower.\n4. Therefore, some roses (being a subset of flowers) must also fade quickly.",
+          "score": 2
+        },
+        "draft-raw": {
+          "text": "No, it does not follow that some roses fade quickly. The statement \"All roses are flowers\" is a universal statement that applies to all roses, regardless of their characteristics, such as fading. The fact that some flowers fade quickly is a specific property of certain types of flowers, not a characteristic of all roses.",
+          "score": 10
+        },
+        "swarm-final": {
+          "text": "It does not follow that some roses fade quickly. The statement \"All roses are flowers\" is a universal statement that applies to all roses, regardless of their characteristics, such as fading. The fact that some flowers, like certain types of roses, fade quickly is a specific property, not a characteristic of all roses.",
+          "score": 10
+        }
+      },
+      "swarmChain": {
+        "draft": "req-1791281110239-4c3a2543-12",
+        "critique": "req-1791281138412-04dba059-13",
+        "adjudicator": "req-1791281145503-7a70c94a-14"
+      }
+    },
+    {
+      "id": "q3",
+      "prompt": "What is the capital of Iceland, and roughly what is its population? Give one sentence of context.",
+      "gold": "Reykjavik; roughly 375k people in the country, about 140k in the city region.",
+      "candidates": {
+        "weakest-single": {
+          "text": "The capital of Iceland is Reykjavík, and its population is approximately 310,000.",
+          "score": 7
+        },
+        "best-single": {
+          "text": "Reykjavik is the capital of Iceland, with a population of approximately 125,000 people, making it the country's largest city.",
+          "score": 7
+        },
+        "draft-raw": {
+          "text": "The capital of Iceland is Reykjavik, and it is the country's third most populous city with a population of approximately 123,000 people.",
+          "score": 8
+        },
+        "swarm-final": {
+          "text": "Iceland's capital, Reykjavik, is home to approximately 128,000 people, and it serves as the country's administrative center and hub for its vibrant culture and tourism industry.",
+          "score": 9
+        }
+      },
+      "swarmChain": {
+        "draft": "req-1791281169341-78623e42-21",
+        "critique": "req-1791281190585-3cfe0b1b-22",
+        "adjudicator": "req-1791281195329-05a1f63b-23"
+      }
+    },
+    {
+      "id": "q4",
+      "prompt": "A baker has 12 eggs. Each cake needs 3 eggs. How many full cakes can she bake, and how many eggs remain? Show the division.",
+      "gold": "4 cakes, 0 eggs remain (12 / 3 = 4).",
+      "candidates": {
+        "weakest-single": {
+          "text": "To determine how many full cakes the baker can bake and how many eggs remain, we can use division.\n\n1. Calculate the number of full cakes: \\[\n\\text{Number of full cakes} = \\left\\lfloor \\frac{12}{3} \\right\\rfloor = 4\n\\]\n2. Calculate the number of eggs remaining: \\[\n\\text{Eggs remaining} = 12 - (3 \\times 4) = 12 - 12 = 0\n\\]\n\nSo, the baker can bake 4 full cakes and 0 eggs remain.",
+          "score": 10
+        },
+        "best-single": {
+          "text": "To find the number of full cakes, divide the total number of eggs by the number of eggs per cake:\n\n12 eggs ÷ 3 eggs/cake = 4 cakes\n\nTo find the remaining eggs, multiply the number of full cakes by the number of eggs per cake, then subtract from the total:\n\n4 cakes x 3 eggs/cake = 12 eggs\n12 eggs - 12 eggs = 0 eggs\n\nThe baker can bake 4 full cakes and has 0 eggs remaining.",
+          "score": 10
+        },
+        "draft-raw": {
+          "text": "To find out how many full cakes the baker can bake and how many eggs remain, we need to divide the total number of eggs by the number of eggs per cake.\n\n12 eggs ÷ 3 eggs per cake = 4 cakes\n\nThe baker can bake 4 full cakes and have 0 eggs remaining.",
+          "score": 10
+        },
+        "swarm-final": {
+          "text": "A baker has 12 eggs. Each cake needs 3 eggs. To find out how many full cakes the baker can bake and how many eggs remain, we need to divide the total number of eggs by the number of eggs per cake.\n\n12 eggs ÷ 3 eggs per cake = 4 \n\nThe baker can bake 4 full cakes and have 0 eggs remaining.",
+          "score": 10
+        }
+      },
+      "swarmChain": {
+        "draft": "req-1791281223657-f7287525-30",
+        "critique": "req-1791281251750-5f0054bc-31",
+        "adjudicator": "req-1791281258047-f9d99bf1-32"
+      }
+    },
+    {
+      "id": "q5",
+      "prompt": "Choose the correct word: 'The rain had a big ___ on the match.' Is it 'affect' or 'effect'? Explain briefly why.",
+      "gold": "effect (noun). 'Affect' is the verb; here we need a noun object.",
+      "candidates": {
+        "weakest-single": {
+          "text": "The correct word is 'affect'. The sentence \"The rain had a big ___ on the match\" is incorrect because \"affect\" is the correct word. Affect means to have an impact on, affect someone or something, while \"effect\" refers to the result or result.",
+          "score": 6
+        },
+        "best-single": {
+          "text": "The correct word is 'affect'. \n\n'affect' is a verb that means to influence or have an impact on something, while 'effect' is a noun that means a result or outcome. In this context, 'affect' is used to describe the rain's influence on the match.",
+          "score": 8
+        },
+        "draft-raw": {
+          "text": "The correct word is \"effect.\" \n\nThe reason is that \"effect\" is a verb, meaning it describes an outcome or a result of an action. It is formed with the suffix \"-effect,\" whereas \"affect\" is an adjective, describing the nature or quality of something. The sentence should read: \"The rain had an effect on the match.\"",
+          "score": 8
+        },
+        "swarm-final": {
+          "text": "The correct word is \"effect\". The reason is that \"effect\" is a noun, referring to the result or outcome of an action, whereas \"affect\" is a verb, meaning it describes an influence or a change. Therefore, in this context, \"effect\" is the suitable choice to describe the impact of the rain on the match.",
+          "score": 10
+        }
+      },
+      "swarmChain": {
+        "draft": "req-1791281284648-953564be-39",
+        "critique": "req-1791281315476-b69d0e68-40",
+        "adjudicator": "req-1791281320017-07b50e5e-41"
+      }
+    },
+    {
+      "id": "q6",
+      "prompt": "A glass of water is left in a freezer overnight. What happened to it, and why? What state change occurred?",
+      "gold": "It froze: water → ice, liquid → solid, exothermic phase change at 0 C.",
+      "candidates": {
+        "weakest-single": {
+          "text": "The glass of water in the freezer overnight would freeze solid, becoming a solid state. This is because the freezing process occurs at a lower temperature, which is the same as the temperature of the freezer, causing the water molecules to become stationary and freeze into ice crystals.",
+          "score": 8
+        },
+        "best-single": {
+          "text": "The glass of water underwent a phase change from liquid to solid (ice). This occurred because the water molecules cooled down and lost energy, allowing them to slow down and come together in a crystalline structure, forming ice.",
+          "score": 9
+        },
+        "draft-raw": {
+          "text": "When a glass of water is left in a freezer overnight, the temperature drops to around 0°C (32°F). At this temperature, water undergoes a phase transition from a liquid to a gas. This process is called sublimation.\n\nAs the temperature drops, the water molecules gain enough energy to transition directly from the liquid state to the gas state, without going through the solid phase. This is why the water appears to \"evaporate\" or disappear from the glass, even though it's still cold.",
+          "score": 4
+        },
+        "swarm-final": {
+          "text": "When a glass of water is left in a freezer overnight, the temperature drops to around 0°C (32°F). At this temperature, the water undergoes a phase transition from a liquid to a gas, known as sublimation. As the temperature drops, the water molecules gain enough energy to transition directly from the liquid state to the gas state, without going through the solid phase. This process occurs because the molecules are moving rapidly enough to overcome their intermolecular forces, allowing them to escape into the gas phase.",
+          "score": 6
+        }
+      },
+      "swarmChain": {
+        "draft": "req-1791281351135-2557abc5-48",
+        "critique": "req-1791281387287-a5ba2740-49",
+        "adjudicator": "req-1791281394372-21b661df-50"
+      }
+    },
+    {
+      "id": "q7",
+      "prompt": "Summarize in one or two sentences: A study found that students who consistently sleep eight or more hours per night score significantly higher on memory-recall tests than students who sleep less, regardless of total study time.",
+      "gold": "Sleeping 8+ hours nightly correlates with significantly better memory recall than short sleep, independent of study hours.",
+      "candidates": {
+        "weakest-single": {
+          "text": "A study indicates that students who consistently sleep eight or more hours per night perform better on memory-recall tests compared to those who sleep less.",
+          "score": 8
+        },
+        "best-single": {
+          "text": "Students who consistently sleep eight or more hours per night tend to perform better on memory-recall tests compared to those who sleep less, regardless of the amount of study time. Sleeping eight or more hours per night has a significant positive impact on memory recall.",
+          "score": 9
+        },
+        "draft-raw": {
+          "text": "A study found that students who consistently sleep 8 or more hours per night scored significantly higher on memory-recall tests than students who slept less, regardless of total study time. This suggests that adequate sleep is crucial for better memory and recall performance.",
+          "score": 9
+        },
+        "swarm-final": {
+          "text": "A study found that students who consistently sleep 8 or more hours per night scored significantly higher on memory-recall tests than students who slept less, regardless of total study time. Adequate sleep is a critical factor in improving memory and recall performance.",
+          "score": 9
+        }
+      },
+      "swarmChain": {
+        "draft": "req-1791281421262-f759f410-57",
+        "critique": "req-1791281442019-5b70f22e-58",
+        "adjudicator": "req-1791281448753-ed789abd-59"
+      }
+    },
+    {
+      "id": "q8",
+      "prompt": "Sara has $10. She buys 3 apples at $1.50 each and a bag of chips at $2.00. How much money does she have left? Show the work.",
+      "gold": "$3.50 (3 x 1.50 = 4.50; 4.50 + 2.00 = 6.50; 10 - 6.50 = 3.50).",
+      "candidates": {
+        "weakest-single": {
+          "text": "To find out how much money Sara has left, we need to calculate the total amount she spent and subtract that from the initial amount she had. Here's the step-by-step calculation:\n\n1. Calculate the cost of the apples: 3 apples * $1.50/apple = $4.50\n2. Add the cost of the chips: $2.00\n3. Total cost = $4.50 + $2.00 = $6.50\n4. Subtract the total cost from the initial amount: $10.00 - $6.50 = $3.50",
+          "score": 9
+        },
+        "best-single": {
+          "text": "To find out how much money Sara has left, we need to calculate the total amount she spent and subtract it from her initial amount of $10.\n\n1. Calculate the cost of 3 apples:\n3 apples x $1.50 each = $4.50\n\n2. Add the cost of the bag of chips:\n$4.50 + $2.00 = $6.50\n\n3. Subtract the total amount spent from the initial amount:\n$10 - $6.50 = $3.50\n\nSara has $3.50 left.",
+          "score": 10
+        },
+        "draft-raw": {
+          "text": "To find out how much money Sara has left, we need to calculate the total cost of the items she bought and subtract it from the initial amount of money she had.\n\n1. Calculate the cost of the apples:\n   3 apples at $1.50 each = 3 x $1.50 = $4.50\n\n2. Add the cost of the bag of chips:\n   $4.50 (apples) + $2.00 (chips) = $6.50\n\n3. Subtract the total cost from the initial amount of money Sara had:\n   $10 (initial amount) - $6.50 (",
+          "score": 8
+        },
+        "swarm-final": {
+          "text": "To find out how much money Sara has left, we need to calculate the total cost of the items she bought and subtract it from the initial amount of money she had.\n\n1. Calculate the cost of the apples:\n   3 apples at $1.50 each = 3 x $1.50 = $4.50\n\n2. Add the cost of the bag of chips:\n   $4.50 (apples) + $2.00 (chips) = $6.50\n\n3. Subtract the total cost from the initial amount of money Sara had:\n   $10 (initial amount) - $6.50 = $3.50",
+          "score": 9
+        }
+      },
+      "swarmChain": {
+        "draft": "req-1791281481057-b8149e3f-66",
+        "critique": "req-1791281523134-baa97832-67",
+        "adjudicator": "req-1791281530299-9b3d1f19-68"
+      }
+    }
+  ],
+  "swarmChain": {
+    "qid": "q1",
+    "draft": {
+      "requestId": "req-1791281046865-cd177c8a-3",
+      "replayHandle": "4b20f98f4d1f8cdd5d6c552c7e94ef06abeaa17fb67446138c7670c139865e55"
+    },
+    "critique": {
+      "requestId": "req-1791281075031-2b469566-4",
+      "replayHandle": "99854ccd4c5c07b059b2d26ec3d233620c647e3fe86adfec0e3b863dbbf7fa57"
+    },
+    "adjudicator": {
+      "requestId": "req-1791281081497-5da731b9-5",
+      "replayHandle": "186b96d73021108b4a6d45e7130d65b20022a4c0e19b965628f905e6ff1e18bb"
+    }
+  },
+  "aggregate": {
+    "weakest-single": {
+      "n": 8,
+      "mean": 7.75
+    },
+    "best-single": {
+      "n": 8,
+      "mean": 8
+    },
+    "draft-raw": {
+      "n": 8,
+      "mean": 8.375
+    },
+    "swarm-final": {
+      "n": 8,
+      "mean": 8.375
+    }
+  },
+  "pairwise": {
+    "weakest-single": {
+      "wins": 4,
+      "losses": 2,
+      "ties": 2,
+      "missing": 0
+    },
+    "best-single": {
+      "wins": 3,
+      "losses": 3,
+      "ties": 2,
+      "missing": 0
+    },
+    "draft-raw": {
+      "wins": 4,
+      "losses": 1,
+      "ties": 3,
+      "missing": 0
+    }
+  }
+}

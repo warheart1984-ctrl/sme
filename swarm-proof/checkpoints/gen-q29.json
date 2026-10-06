@@ -1,0 +1,67 @@
+{
+  "qid": "q29",
+  "kind": "general",
+  "prompt": "Who wrote the play 'Romeo and Juliet'?",
+  "gold": "William Shakespeare",
+  "chain": {
+    "draft": "req-1791284266479-78588cc1-171",
+    "review": "req-1791284279285-7e9d5541-172",
+    "free": "req-1791284283201-0012cab9-173",
+    "fuse": "req-1791284299930-45bd1f79-174"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "The play 'Romeo and Juliet' was written by William Shakespeare.",
+      "model": "qwen2.5:0.5b",
+      "ms": 911
+    },
+    "best-single": {
+      "text": "The play \"Romeo and Juliet\" was written by William Shakespeare.",
+      "model": "llama3.2:3b",
+      "ms": 804
+    },
+    "draft-raw": {
+      "text": "William Shakespeare wrote the play 'Romeo and Juliet'.",
+      "model": "llama3.2:1b",
+      "ms": 12802
+    },
+    "swarm-free": {
+      "text": "William Shakespeare wrote the play 'Romeo and Juliet'.",
+      "model": "llama3.2:3b",
+      "ms": 16724
+    },
+    "swarm-fuse": {
+      "text": "William Shakespeare wrote the play 'Romeo and Juliet'.",
+      "model": "llama3.2:3b",
+      "ms": 1191
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 12802
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3915,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 16724
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1191
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 911
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 804
+    }
+  }
+}

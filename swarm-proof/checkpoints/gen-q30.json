@@ -1,0 +1,67 @@
+{
+  "qid": "q30",
+  "kind": "arithmetic",
+  "prompt": "Evaluate: 3 x (4 + 2) - 10 / 2.",
+  "gold": "13 (3 x 6 = 18; 10 / 2 = 5; 18 - 5 = 13).",
+  "chain": {
+    "draft": "req-1791284307974-a50a0d3d-177",
+    "review": "req-1791284343441-43608787-178",
+    "free": "req-1791284347418-64aa5342-179",
+    "fuse": "req-1791284367950-9d30c98e-180"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "To evaluate the expression \\(3 \\times (4 + 2) - 10 \\div 2\\), we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\n1. First, evaluate the expression inside the parentheses: \\(4 + 2 = 6\\).\n2. Now, perform the multiplication: \\(3 \\times 6 = 18\\).\n3. Next, perform the division: \\(10 \\div 2 = 5\\).\n",
+      "model": "qwen2.5:0.5b",
+      "ms": 3391
+    },
+    "best-single": {
+      "text": "To evaluate the expression, follow the order of operations (PEMDAS):\n\n1. Evaluate the expression inside the parentheses: 4 + 2 = 6\n2. Multiply 3 by the result: 3 x 6 = 18\n3. Divide 10 by 2: 10 / 2 = 5\n4. Subtract 5 from 18: 18 - 5 = 13\n\nThe final result is 13.",
+      "model": "llama3.2:3b",
+      "ms": 3445
+    },
+    "draft-raw": {
+      "text": "To evaluate this expression, we follow the order of operations (PEMDAS):\n\n1. Evaluate the expression inside the parentheses: 4 + 2 = 6\n2. Multiply 3 by the result: 3 x 6 = 18\n3. Divide 10 by 2: 10 / 2 = 5\n4. Subtract 5 from 18: 18 - 5 = 13\n\nThe final result is 13.",
+      "model": "llama3.2:1b",
+      "ms": 35464
+    },
+    "swarm-free": {
+      "text": "To evaluate this expression, we follow the order of operations (PEMDAS):\n\n1. Evaluate the expression inside the parentheses: 4 + 2 = 6\n2. Multiply 3 by the result: 3 x 6 = 18\n3. Divide 10 by 2: 10 / 2 = 5\n4. Subtract 5 from 18: 18 - 5 = 13\n\nThe final result is 13.",
+      "model": "llama3.2:3b",
+      "ms": 20530
+    },
+    "swarm-fuse": {
+      "text": "To evaluate this expression, we follow the order of operations (PEMDAS):\n\n1. Evaluate the expression inside the parentheses: 4 + 2 = 6\n2. Multiply 3 by the result: 3 x 6 = 18\n3. Divide 10 by 2: 10 / 2 = 5\n4. Subtract 5 from 18: 18 - 5 = 13\n\nThe final result is 13.",
+      "model": "llama3.2:3b",
+      "ms": 4071
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 35464
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3976,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 20530
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 4071
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3391
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 3445
+    }
+  }
+}

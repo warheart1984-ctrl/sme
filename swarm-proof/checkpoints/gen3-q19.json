@@ -1,0 +1,44 @@
+{
+  "qid": "q19",
+  "kind": "arithmetic",
+  "prompt": "A shirt costs $80. It is discounted 25%. What is the sale price?",
+  "gold": "$60 (25% of 80 is 20, so 80 - 20 = 60).",
+  "critic": "llama3.2:3b",
+  "criticBase": "qwen2.5:0.5b",
+  "fuseKept": true,
+  "chain": {
+    "review": "req-1791289635538-90ae2217-55",
+    "free": "req-1791289639672-1e841877-56",
+    "fuse": "req-1791289642910-186243e1-57"
+  },
+  "candidates": {
+    "swarm-free-3c": {
+      "text": "To find the sale price of a shirt originally priced at $80, calculate 25% of the original price, then subtract that amount from the original price.\n\n25% of $80 = 0.25 × $80 = $20\n\nThe discount is $20, which is 25% of the original price.\n\nSale price = Original price - Discount\n= $80 - $20\n= $60\n\nThe sale price of the shirt is $60.",
+      "model": "llama3.2:3b",
+      "ms": 3238
+    },
+    "swarm-fuse-3c": {
+      "text": "To find the sale price, calculate 25% of the original price and subtract it from the original price.\n\n25% of $80 = 0.25 x $80 = $20\n\nSale price = Original price - Discount\n= $80 - $20\n= $60\n\nThe sale price of the shirt is $60.",
+      "model": "llama3.2:3b",
+      "ms": 3237
+    }
+  },
+  "stages": {
+    "review": {
+      "model": "llama3.2:3b",
+      "ms": 4132,
+      "verdict": "FLAG",
+      "verdictLenient": "FLAG",
+      "text": "Here are the errors found:\n\n1. Incorrect calculation of 25% of the original price: 0.25 x $80 = $20 is correct, but the calculation is not explicitly stated.\n2. Missing unit for the discount: The discount is $20, but its origin (25% of the original price) is not clarified.\n3. Lack of unit for the sale price: The sale price is $60, but its unit (dollars) is not explicitly stated.\n\nFINAL VERDICT: FLAG"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3238
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 3237
+    }
+  },
+  "baseReviewVerdict": "PASS"
+}

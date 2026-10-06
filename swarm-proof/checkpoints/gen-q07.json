@@ -1,0 +1,67 @@
+{
+  "qid": "q07",
+  "kind": "summary",
+  "prompt": "Summarize in one or two sentences: A study found that adults who slept 6 hours or less each night had a 12% higher risk of early death than those who slept 7 to 8 hours. The link remained after adjusting for age, sex, and lifestyle factors, so the authors say sleep duration itself matters, not just health problems.",
+  "gold": "Sleeping 6 hours or less was linked to a 12% higher early-death risk than 7-8 hours, even after adjusting for lifestyle and health factors, so the authors conclude short sleep itself matters.",
+  "chain": {
+    "draft": "req-1791282972685-91cb0950-39",
+    "review": "req-1791282999516-f0080e17-40",
+    "free": "req-1791283003272-3ece25bb-41",
+    "fuse": "req-1791283022477-303bb50d-42"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "The study suggests that adults who sleep less than 7 hours per night have a higher risk of early death compared to those who sleep 7 to 8 hours per night. This finding aligns with the authors' earlier findings suggesting that sleep duration itself matters, not just health problems.",
+      "model": "qwen2.5:0.5b",
+      "ms": 1887
+    },
+    "best-single": {
+      "text": "Adults who sleep 6 hours or less per night have a 12% higher risk of early death compared to those who sleep 7-8 hours per night. This increased risk is not fully explained by age, sex, or lifestyle factors, suggesting that sleep duration itself is a significant predictor of mortality.",
+      "model": "llama3.2:3b",
+      "ms": 2678
+    },
+    "draft-raw": {
+      "text": "A study found that adults who slept 6 hours or less per night had a 12% higher risk of early death, regardless of age, sex, or lifestyle factors. This suggests that sleep duration itself is a critical factor, rather than just health problems, in determining mortality risk.",
+      "model": "llama3.2:1b",
+      "ms": 26829
+    },
+    "swarm-free": {
+      "text": "Here is a revised version of the summary:\n\nAdults who slept 6 hours or less per night had a 12% higher risk of early death compared to those who slept 7-8 hours, with the association remaining significant after adjusting for age, sex, and lifestyle factors, indicating that sleep duration itself is a critical factor in mortality risk.",
+      "model": "llama3.2:3b",
+      "ms": 19203
+    },
+    "swarm-fuse": {
+      "text": "A study found that adults who slept 6 hours or less per night had a 12% higher risk of early death, regardless of age, sex, or lifestyle factors. This suggests that sleep duration itself is a critical factor, rather than just health problems, in determining mortality risk.",
+      "model": "llama3.2:3b",
+      "ms": 2858
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 26829
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3754,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 19203
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 2858
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 1887
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 2678
+    }
+  }
+}

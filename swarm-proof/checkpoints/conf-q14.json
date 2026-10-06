@@ -1,0 +1,7 @@
+{
+  "qid": "q14",
+  "verdict": null,
+  "confidence": 0.8,
+  "text": "CONFIDENCE: 0.80\n\nThe draft answer contains the following errors:\n\n* The country covering approximately 17.1 million square kilometers is Russia, not the answer itself.\n* Russia's land area is approximately 17.1 million square kilometers, not 6.6 million square miles.\n* The correct conversion factor is 1 million square kilometers = 1,000,000 square miles, so 17.1 million square kilometers is equivalent to 17,100,000,000 square miles.",
+  "ms": 22850
+}

@@ -1,0 +1,67 @@
+{
+  "qid": "q14",
+  "kind": "geography",
+  "prompt": "What is the largest country in the world by land area?",
+  "gold": "Russia",
+  "chain": {
+    "draft": "req-1791283429567-9dfc7c2d-81",
+    "review": "req-1791283450739-dac25b65-82",
+    "free": "req-1791283454696-7c1bbb19-83",
+    "fuse": "req-1791283471740-324c8233-84"
+  },
+  "fuseKept": true,
+  "candidates": {
+    "weakest-single": {
+      "text": "The largest country in the world by land area is Russia.",
+      "model": "qwen2.5:0.5b",
+      "ms": 421
+    },
+    "best-single": {
+      "text": "Russia is the largest country in the world by land area, covering approximately 17.1 million square kilometers (6.6 million square miles).",
+      "model": "llama3.2:3b",
+      "ms": 1217
+    },
+    "draft-raw": {
+      "text": "Russia is the largest country in the world by land area, covering approximately 17.1 million square kilometers (6.6 million square miles).",
+      "model": "llama3.2:1b",
+      "ms": 21171
+    },
+    "swarm-free": {
+      "text": "Russia is the largest country in the world by land area, covering approximately 17.1 million square kilometers (6.6 million square miles).",
+      "model": "llama3.2:3b",
+      "ms": 17036
+    },
+    "swarm-fuse": {
+      "text": "Russia is the largest country in the world by land area, covering approximately 17.1 million square kilometers (6.6 million square miles).",
+      "model": "llama3.2:3b",
+      "ms": 1776
+    }
+  },
+  "stages": {
+    "draft": {
+      "model": "llama3.2:1b",
+      "ms": 21171
+    },
+    "review": {
+      "model": "qwen2.5:0.5b",
+      "ms": 3955,
+      "verdict": "PASS"
+    },
+    "freeAdj": {
+      "model": "llama3.2:3b",
+      "ms": 17036
+    },
+    "fuseAdj": {
+      "model": "llama3.2:3b",
+      "ms": 1776
+    },
+    "weakSingle": {
+      "model": "qwen2.5:0.5b",
+      "ms": 421
+    },
+    "bestSingle": {
+      "model": "llama3.2:3b",
+      "ms": 1217
+    }
+  }
+}

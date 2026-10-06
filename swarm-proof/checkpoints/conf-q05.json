@@ -1,0 +1,7 @@
+{
+  "qid": "q05",
+  "verdict": "PASS",
+  "confidence": 0.8,
+  "text": "FINAL VERDICT: PASS\n\nCONFIDENCE: 0.80\n\nThe errors in the draft answer are:\n\n* The word \"affect\" instead of \"effect\" ( incorrect usage of \"affect\" as a noun, when it should be used as a verb to mean to influence or have an impact on something)\n* The incorrect placement of the word \"effect\" (it should be \"on\" to correctly link the noun \"effect\" to the noun \"match\")",
+  "ms": 21504
+}
