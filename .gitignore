@@ -1,0 +1,9 @@
+node_modules/
+dist/models/
+sme-suite/build/
+sme-suite/build-gcc/
+sme-suite/build-gcc-test/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.log

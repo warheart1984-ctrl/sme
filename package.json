@@ -1,0 +1,54 @@
+{
+  "name": "@mandala/sme",
+  "version": "0.1.1",
+  "description": "Governed Sovereign Multimodal Engine runtime for Mandala and Project Infinity.",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./lattice": "./dist/lattice/index.js",
+    "./core": "./dist/core/index.js",
+    "./txt": "./dist/txt/index.js",
+    "./vis": "./dist/vis/index.js",
+    "./aud": "./dist/aud/index.js",
+    "./vid": "./dist/vid/index.js",
+    "./gen": "./dist/gen/index.js",
+    "./log": "./dist/log/index.js",
+    "./native-bridge": "./dist/native-bridge.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/native-bridge.js",
+    "dist/aud/*.js",
+    "dist/contracts/*.js",
+    "dist/core/*.js",
+    "dist/gen/*.js",
+    "dist/lattice/*.js",
+    "dist/lattice/spine/*.js",
+    "dist/log/*.js",
+    "dist/txt/*.js",
+    "dist/vid/*.js",
+    "dist/vis/*.js",
+    "types/*.d.ts",
+    "PROVENANCE.json",
+    "STABILITY.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js dist/lattice/test/lattice.test.js",
+    "test:lattice": "node --test dist/lattice/test/lattice.test.js",
+    "test:package": "node --test test/package.test.js",
+    "pack:check": "node scripts/verify-pack.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

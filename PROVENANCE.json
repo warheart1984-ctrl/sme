@@ -1,0 +1,60 @@
+{
+  "schema": "mandala-sme-package-provenance/1.0",
+  "package": "@mandala/sme",
+  "version": "0.1.1",
+  "status": "validated",
+  "derived_from": {
+    "repository": "Mandala Rendering Software",
+    "git_commit": "02e0a9355489f8ad0ce9b2fbde35a2b76d257db2",
+    "subtree": "sme",
+    "subtree_git_tree": "4a09e5a63a34a5269f2d87dfe2c113b4b25eb9cd"
+  },
+  "working_tree_patch": {
+    "status": "validated_uncommitted",
+    "purpose": "Persist deterministic replay records for governed module execution refusals.",
+    "files": [
+      "sme/dist/lattice/index.js",
+      "sme/dist/lattice/test/lattice.test.js"
+    ]
+  },
+  "package_boundary": {
+    "stable": [
+      "lattice routing",
+      "authority and validation chain",
+      "evidence bundles",
+      "replay handles",
+      "replay handles for governed execution refusals",
+      "CommonJS exports"
+    ],
+    "experimental": [
+      "model-backed text",
+      "model-backed vision",
+      "model-backed audio",
+      "model-backed video",
+      "generative media backends"
+    ]
+  },
+  "excluded": [
+    "model weights",
+    "native binaries",
+    "dependency trees",
+    "runtime logs",
+    "credentials",
+    "conflict-marked Python SME packages",
+    "conflict-marked SME specification documents",
+    "mock MCP dispatcher"
+  ],
+  "verification": {
+    "package_and_lattice_tests": {
+      "command": "npm test",
+      "passed": 38,
+      "failed": 0
+    },
+    "package_payload": {
+      "command": "npm run pack:check",
+      "file_count": 28,
+      "contains_models": false,
+      "contains_dependency_tree": false
+    }
+  }
+}
